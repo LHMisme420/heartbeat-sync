@@ -6664,3 +6664,589 @@ def live_coaching():
 
 # ... rest of the app ...
 ./launch_magic.sh
+# Consider adding PostgreSQL for production
+import psycopg2
+def init_db():
+    conn = psycopg2.connect(
+        host='localhost',
+        database='heartbeats',
+        user='heartbeat_user',
+        password='your_password'
+    )
+    return conn
+# Add proper configuration management
+class Config:
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'dev-key-please-change'
+    DEBUG = os.environ.get('DEBUG') or False
+    DATABASE_URL = os.environ.get('DATABASE_URL')
+    
+app.config.fro# Add comprehensive error handling
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('404.html'), 404
+
+@app.errorhandler(500)
+def internal_error(error):
+    logger.error(f"Server Error: {error}")
+    return render_template('500.html'), 500m_object(Config)
+# core/optimized_storage.py
+import sqlite3
+import redis
+import json
+from contextlib import contextmanager
+import threading
+
+class OptimizedStorage:
+    def __init__(self):
+        self.redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
+        self._local = threading.local()
+    
+    @contextmanager
+    def get_db(self):
+        """Thread-local SQLite connection with connection pooling"""
+        if not hasattr(self._local, 'connection'):
+            self._local.connection = sqlite3.connect(
+                'heartbeats.db', 
+                check_same_thread=False,
+                timeout=30.0
+            )
+            # Enable WAL mode for better concurrent reads
+            self._local.connection.execute('PRAGMA journal_mode=WAL')
+            self._local.connection.execute('PRAGMA cache_size=-64000')  # 64MB cache
+            self._local.connection.execute('PRAGMA synchronous=NORMAL')
+        yield self._local.connection
+    
+    def cache_match_results(self, cache_key, matches, expire=300):
+        """Cache matching results with compression"""
+        compressed_data = json.dumps(matches)
+        self.redis_client.setex(f"matches:{cache_key}", expire, compressed_data)
+    
+    def get_cached_matches(self, cache_key):
+        """Get cached matches with fallback"""
+        cached = self.redis_client.get(f"matches:{cache_key}")
+        return json.loads(cached) if cached else None
+    
+    def batch_user_operations(self, operations):
+        """Batch database operations for performance"""
+        with self.get_db() as conn:
+            conn.executemany(
+                "INSERT OR REPLACE INTO users (id, data) VALUES (?, ?)",
+                operations
+            )
+            conn.commit()
+
+# Initialize optimized storage
+storage = OptimizedStorage()
+# core/optimized_matcher.py
+import numpy as np
+from collections import defaultdict
+import time
+from functools import lru_cache
+import logging
+
+logger = logging.getLogger(__name__)
+
+class OptimizedNeuralBridge:
+    def __init__(self, storage):
+        self.storage = storage
+        self.user_cache = {}
+        self.cache_ttl = 300  # 5 minutes
+        self.last_cache_refresh = 0
+        
+    def precompute_compatibility_matrix(self, user_ids):
+        """Precompute compatibility scores for faster matching"""
+        start_time = time.time()
+        
+        # Vectorize user data for numpy operations
+        user_vectors = {}
+        for user_id in user_ids:
+            user_data = self.get_cached_user(user_id)
+            if user_data:
+                user_vectors[user_id] = self.vectorize_user(user_data)
+        
+        # Create compatibility matrix
+        compatibility_matrix = {}
+        user_list = list(user_vectors.keys())
+        
+        for i, user_a_id in enumerate(user_list):
+            compatibility_matrix[user_a_id] = {}
+            vector_a = user_vectors[user_a_id]
+            
+            for user_b_id in user_list[i+1:]:
+                vector_b = user_vectors[user_b_id]
+                score = self.fast_cosine_similarity(vector_a, vector_b)
+                compatibility_matrix[user_a_id][user_b_id] = score
+        
+        logger.info(f"Precomputed compatibility matrix for {len(user_ids)} users in {time.time() - start_time:.2f}s")
+        return compatibility_matrix
+    
+    def vectorize_user(self, user_data):
+        """Convert user data to numerical vector for fast computation"""
+        metrics = user_data.get('growth_metrics', {})
+        intentions = user_data.get('intentions', [])
+        
+        # Convert to numerical vector
+        vector = [
+            metrics.get('vulnerability_courage', 0.5),
+            metrics.get('joy_amplification', 0.5),
+            metrics.get('connection_depth', 0.5),
+            metrics.get('purpose_alignment', 0.5),
+            len(intentions) / 4.0,  # Normalize intention count
+            # Add more features as needed
+        ]
+        return np.array(vector, dtype=np.float32)
+    
+    def fast_cosine_similarity(self, a, b):
+        """Optimized cosine similarity using numpy"""
+        return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
+    
+    @lru_cache(maxsize=1000)
+    def get_cached_user(self, user_id):
+        """LRU cache for frequently accessed users"""
+        cached = self.storage.redis_client.get(f"user:{user_id}")
+        if cached:
+            return json.loads(cached)
+        return None
+    
+    def find_optimal_matches_batch(self, user_ids, batch_size=50):
+        """Process matches in batches for better performance"""
+        matches = []
+        
+        for i in range(0, len(user_ids), batch_size):
+            batch = user_ids[i:i + batch_size]
+            batch_matches = self.process_batch(batch)
+            matches.extend(batch_matches)
+            
+        return matches
+    
+    def process_batch(self, user_batch):
+        """Process a batch of users for matching"""
+        compatibility_matrix = self.precompute_compatibility_matrix(user_batch)
+        batch_matches = []
+        
+        for user_a in user_batch:
+            best_match = None
+            best_score = 0
+            
+            for user_b, score in compatibility_matrix.get(user_a, {}).items():
+                if score > best_score and score > 0.7:  # Threshold
+                    best_score = score
+                    best_match = user_b
+            
+            if best_match:
+                batch_matches.append({
+                    'pair': (user_a, best_match),
+                    'score': best_score,
+                    'type': 'neural_bridge'
+                })
+        
+        return batch_matches
+# core/optimized_app.py
+from flask import Flask, g, request
+import time
+import logging
+from functools import wraps
+import os
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+class OptimizedApp(Flask):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.before_request(self._before_request)
+        self.after_request(self._after_request)
+    
+    def _before_request(self):
+        g.start_time = time.time()
+        g.query_count = 0
+    
+    def _after_request(self, response):
+        if hasattr(g, 'start_time'):
+            duration = time.time() - g.start_time
+            response.headers['X-Response-Time'] = f'{duration:.3f}s'
+            
+            # Log slow requests
+            if duration > 1.0:  # 1 second threshold
+                logger.warning(f"Slow request: {request.path} took {duration:.3f}s")
+        
+        return response
+
+# Create optimized app instance
+app = OptimizedApp(__name__)
+
+# Performance monitoring decorator
+def monitor_performance(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        start_time = time.time()
+        result = f(*args, **kwargs)
+        duration = time.time() - start_time
+        
+        if duration > 0.5:  # Log slow endpoints
+            logger.info(f"SLOW ENDPOINT: {f.__name__} took {duration:.3f}s")
+        
+        return result
+    return decorated_function
+
+# Route-specific optimizations
+@app.route('/api/optimized-matches', methods=['GET'])
+@monitor_performance
+def get_optimized_matches():
+    """Optimized matching endpoint with caching"""
+    user_id = session.get('user_id')
+    if not user_id:
+        return jsonify({'error': 'Not authenticated'}), 401
+    
+    # Check cache first
+    cache_key = f"user_matches:{user_id}"
+    cached_matches = storage.get_cached_matches(cache_key)
+    
+    if cached_matches:
+        logger.info(f"Cache hit for user {user_id}")
+        return jsonify({'matches': cached_matches, 'source': 'cache'})
+    
+    # Compute matches with optimized algorithm
+    all_user_ids = list(users_db.keys())
+    matches = optimized_matcher.find_optimal_matches_batch(all_user_ids)
+    
+    # Cache results
+    storage.cache_match_results(cache_key, matches)
+    
+    logger.info(f"Computed {len(matches)} matches for user {user_id}")
+    return jsonify({'matches': matches, 'source': 'computed'})
+/* static/css/optimized.css */
+/* Critical CSS - Load immediately */
+.critical-load {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.critical-loaded {
+    opacity: 1;
+}
+
+/* Optimize animations */
+.optimized-animation {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Lazy loading for images */
+.lazy-image {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.lazy-image.loaded {
+    opacity: 1;
+}
+
+/* Reduce repaints */
+.static-element {
+    transform: translateZ(0);
+}
+
+/* Optimize floating hearts */
+.floating-heart {
+    will-change: transform;
+    contain: layout style paint;
+}// static/js/optimized.js
+class PerformanceOptimizer {
+    constructor() {
+        this.intersectionObserver = null;
+        this.debounceTimeouts = new Map();
+        this.init();
+    }
+    
+    init() {
+        this.setupLazyLoading();
+        this.setupPerformanceMonitoring();
+        this.optimizeAnimations();
+    }
+    
+    setupLazyLoading() {
+        // Lazy load images and components
+        this.intersectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.loadLazyContent(entry.target);
+                    this.intersectionObserver.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '50px' });
+        
+        document.querySelectorAll('[data-lazy]').forEach(el => {
+            this.intersectionObserver.observe(el);
+        });
+    }
+    
+    loadLazyContent(element) {
+        const src = element.dataset.src;
+        if (src) {
+            element.src = src;
+            element.classList.add('loaded');
+        }
+    }
+    
+    // Debounce expensive operations
+    debounce(key, func, delay = 300) {
+        clearTimeout(this.debounceTimeouts.get(key));
+        this.debounceTimeouts.set(key, setTimeout(func, delay));
+    }
+    
+    // Optimize animation performance
+    optimizeAnimations() {
+        // Use transform and opacity for better performance
+        const animatedElements = document.querySelectorAll('.animated');
+        animatedElements.forEach(el => {
+            el.style.willChange = 'transform, opacity';
+        });
+    }
+    
+    // Memory management
+    cleanup() {
+        if (this.intersectionObserver) {
+            this.intersectionObserver.disconnect();
+        }
+        this.debounceTimeouts.forEach(timeout => clearTimeout(timeout));
+    }
+}
+
+// Initialize optimizer
+const optimizer = new PerformanceOptimizer();
+
+// Optimized matching request with debouncing
+class OptimizedMatcher {
+    constructor() {
+        this.pendingRequests = new Map();
+    }
+    
+    async requestMatch(userData) {
+        const requestKey = JSON.stringify(userData);
+        
+        // Cancel previous identical requests
+        if (this.pendingRequests.has(requestKey)) {
+            this.pendingRequests.get(requestKey).abort();
+        }
+        
+        // Create new abort controller
+        const controller = new AbortController();
+        this.pendingRequests.set(requestKey, controller);
+        
+        try {
+            const response = await fetch('/api/optimized-matches', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(userData),
+                signal: controller.signal
+            });
+            
+            return await response.json();
+        } finally {
+            this.pendingRequests.delete(requestKey);
+        }
+    }
+}-- Optimized SQL schema
+CREATE TABLE IF NOT EXISTS users (
+    id TEXT PRIMARY KEY,
+    soul_name TEXT,
+    magic_signature TEXT,
+    intentions TEXT, -- JSON stored as text for simplicity
+    growth_metrics TEXT,
+    location TEXT,
+    created_at INTEGER DEFAULT (strftime('%s', 'now')),
+    updated_at INTEGER DEFAULT (strftime('%s', 'now'))
+);
+
+CREATE TABLE IF NOT EXISTS connections (
+    id TEXT PRIMARY KEY,
+    user_a_id TEXT REFERENCES users(id),
+    user_b_id TEXT REFERENCES users(id),
+    spark_id TEXT,
+    resonance_score REAL,
+    session_data TEXT,
+    created_at INTEGER DEFAULT (strftime('%s', 'now')),
+    status TEXT DEFAULT 'active'
+);
+
+-- Optimized indexes
+CREATE INDEX IF NOT EXISTS idx_users_location ON users(location);
+CREATE INDEX IF NOT EXISTS idx_connections_users ON connections(user_a_id, user_b_id);
+CREATE INDEX IF NOT EXISTS idx_connections_resonance ON connections(resonance_score);
+CREATE INDEX IF NOT EXISTS idx_users_created ON users(created_at);
+
+-- Partial indexes for better performance
+CREATE INDEX IF NOT EXISTS idx_active_connections 
+ON connections(user_a_id, user_b_id) 
+WHERE status = 'active';
+# config/production.py
+import os
+import logging
+
+class ProductionConfig:
+    # Performance settings
+    DEBUG = False
+    TESTING = False
+    
+    # Security
+    SECRET_KEY = os.environ.get('SECRET_KEY', 'your-production-secret-key')
+    
+    # Database
+    DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:///heartbeats.db')
+    
+    # Caching
+    REDIS_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379/0')
+    
+    # Performance tuning
+    JSONIFY_PRETTYPRINT_REGULAR = False
+    JSON_SORT_KEYS = False
+    
+    # Session settings
+    PERMANENT_SESSION_LIFETIME = 3600  # 1 hour
+    SESSION_REFRESH_EACH_REQUEST = True
+    
+    # Logging
+    LOG_LEVEL = logging.INFO
+    LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+
+class DevelopmentConfig(ProductionConfig):
+    DEBUG = True
+    TESTING = True
+ LOG_LEVEL = logging.DEBUG
+# gunicorn_config.py
+import multiprocessing
+
+# Server socket
+bind = "0.0.0.0:5000"
+backlog = 2048
+
+# Worker processes
+workers = multiprocessing.cpu_count() * 2 + 1
+worker_class = "sync"
+worker_connections = 1000
+timeout = 30
+keepalive = 2
+
+# Logging
+accesslog = "-"
+errorlog = "-"
+loglevel = "info"
+
+# Process naming
+proc_name = "heartbeat_sync"
+
+# Server mechanics
+daemon = False
+pidfile = None
+umask = 0
+user = None
+group = None
+tmp_upload_dir = None
+
+# Performance
+max_requests = 1000
+max_requests_jitter = 50
+preload_app = True
+# core/monitoring.py
+import time
+import psutil
+import logging
+from datetime import datetime, timedelta
+
+class PerformanceMonitor:
+    def __init__(self):
+        self.metrics = {
+            'response_times': [],
+            'memory_usage': [],
+            'active_connections': 0,
+            'cache_hit_rate': 0
+        }
+        self.start_time = time.time()
+    
+    def record_response_time(self, endpoint, duration):
+        """Record response time for monitoring"""
+        self.metrics['response_times'].append({
+            'endpoint': endpoint,
+            'duration': duration,
+            'timestamp': datetime.now()
+        })
+        
+        # Keep only last hour of data
+        hour_ago = datetime.now() - timedelta(hours=1)
+        self.metrics['response_times'] = [
+            rt for rt in self.metrics['response_times'] 
+            if rt['timestamp'] > hour_ago
+        ]
+    
+    def get_system_metrics(self):
+        """Get current system performance metrics"""
+        return {
+            'cpu_percent': psutil.cpu_percent(),
+            'memory_percent': psutil.virtual_memory().percent,
+            'disk_usage': psutil.disk_usage('/').percent,
+            'active_threads': threading.active_count(),
+            'uptime': time.time() - self.start_time
+        }
+    
+    def generate_performance_report(self):
+        """Generate performance report"""
+        response_times = [rt['duration'] for rt in self.metrics['response_times']]
+        
+        if response_times:
+            avg_response_time = sum(response_times) / len(response_times)
+            p95_response_time = sorted(response_times)[int(len(response_times) * 0.95)]
+        else:
+            avg_response_time = p95_response_time = 0
+        
+        system_metrics = self.get_system_metrics()
+        
+        return {
+            'average_response_time': avg_response_time,
+            'p95_response_time': p95_response_time,
+            'total_requests': len(response_times),
+            'system_metrics': system_metrics,
+            'cache_hit_rate': self.metrics['cache_hit_rate']
+        }
+
+# Global monitor instance
+performance_monitor = PerformanceMonitor()
+@app.route('/api/health')
+def health_check():
+    """Comprehensive health check endpoint"""
+    health_data = {
+        'status': 'healthy',
+        'timestamp': datetime.now().isoformat(),
+        'version': '1.0.0',
+        'performance': performance_monitor.generate_performance_report(),
+        'database': check_database_health(),
+        'cache': check_cache_health(),
+        'services': {
+            'matching_engine': 'operational',
+            'authentication': 'operational',
+            'caching': 'operational'
+        }
+    }
+    
+    return jsonify(health_data)
+
+def check_database_health():
+    """Check database connectivity and performance"""
+    try:
+        start_time = time.time()
+        storage.execute_query("SELECT 1")
+        query_time = time.time() - start_time
+        
+        return {
+            'status': 'healthy',
+            'response_time': query_time,
+            'connections': len(storage.connections)
+        }
+    except Exception as e:
+        return {
+            'status': 'unhealthy',
+            'error': str(e)
+        }
