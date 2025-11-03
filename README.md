@@ -1699,3 +1699,51 @@ git clone https://github.com/LHMisme420/heartbeat-sync.git
 cd heartbeat-sync/core
 pip install -r requirements.txt
 python app.py
+# ✅ CORRECT - Clone YOUR repository
+git clone https://github.com/LHMisme420/heartbeat-sync.git
+
+# ✅ CORRECT - Navigate to core directory  
+cd heartbeat-sync/core
+
+# ✅ CORRECT - Install dependencies
+pip install -r requirements.txt
+
+# ✅ CORRECT - Run the application
+python app.py
+heartbeat-sync/
+├── core/                 # ✅ Main application
+│   ├── app.py           # ✅ Fixed Flask server
+│   ├── proof_of_spark.py # ✅ Validation engine
+│   ├── __init__.py      # ✅ Makes it a package
+│   └── requirements.txt  # ✅ Dependencies
+├── templates/            # ✅ Web interface
+│   ├── index.html       # ✅ Main vibe form
+│   └── ar_demo.html     # ✅ AR overlay demo
+└── docs/                # ✅ Documentation
+    └── ETHICS_CHARTER.md # ✅ Privacy principles
+# Health check
+GET /api/health
+
+# Submit your vibe  
+POST /api/vibe
+{
+  "location": "NYC",
+  "mood": 7.5,
+  "interests": ["art", "coffee"],
+  "anonymous_id": "user123"
+}
+
+# Get matches
+GET /api/matches
+
+# VC traction metrics
+GET /api/stats
+
+# Enterprise dashboard
+GET /api/enterprise
+# After running python app.py, visit:
+http://localhost:5000
+
+# Test the API directly:
+curl http://localhost:5000/api/stats
+curl http://localhost:5000/api/health
