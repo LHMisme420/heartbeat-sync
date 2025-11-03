@@ -7371,3 +7371,7 @@ services:
   environment_slug: python
   instance_count: 1
   instance_size_slug: basic-xxs
+# In your local repo
+mv core/* .
+rmdir core
+# Update imports in app.py to remove "core." prefix
