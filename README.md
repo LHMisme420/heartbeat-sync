@@ -989,3 +989,60 @@ gunicorn==21.2.0
 
 ## Enforcement
 Violations of this charter result in immediate removal from the project.
+heartbeat-sync/
+├── 📱 **Core Application**
+│   ├── app.py (main Flask server)
+│   ├── proof_of_spark.py (validation engine)
+│   ├── demo.py (standalone tester)
+│   └── web3_nudge.py (privacy proofs)
+├── 🌐 **Web Interface**
+│   └── templates/
+│       ├── index.html (main vibe form)
+│       └── ar_demo.html (AR overlay)
+├── 📚 **Documentation**
+│   ├── README.md
+│   ├── ETHICS_CHARTER.md
+│   ├── CONTRIBUTING.md
+│   └── ROADMAP.md
+├── ⚙️ **Configuration**
+│   ├── requirements.txt
+│   ├── .env.example
+│   └── .gitignore
+└── 🔧 **Development**
+    └── future/
+        ├── mobile/ (React Native)
+        └── contracts/ (Fate Credit SBTs)
+git clone https://github.com/LHMisme420/heartbeat-sync.git
+cd heartbeat-sync
+pip install -r requirements.txt
+python app.py
+# OR
+python demo.py
+<!-- logo.svg -->
+<svg width="120" height="120" viewBox="0 0 120 120">
+  <!-- Two abstract figures -->
+  <circle cx="40" cy="60" r="15" fill="#2563eb" opacity="0.8"/>
+  <circle cx="80" cy="60" r="15" fill="#2563eb" opacity="0.8"/>
+  
+  <!-- Connecting spark -->
+  <path d="M 55,60 L 65,60" stroke="#f59e0b" stroke-width="3">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Central spark dot -->
+  <circle cx="60" cy="60" r="3" fill="#f59e0b">
+    <animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+heartbeat-sync/ (YOUR EXISTING REPO)
+├── 📁 core/           ← NEW FOLDER
+│   ├── app.py         ← MOVE existing files here
+│   ├── proof_of_spark.py
+│   └── requirements.txt
+├── 📁 templates/      ← NEW FOLDER  
+│   ├── index.html     ← MOVE existing HTML
+│   └── ar_demo.html
+├── 📁 docs/           ← NEW FOLDER
+│   ├── ETHICS_CHARTER.md
+│   └── CONTRIBUTING.md
+└── README.md          ← UPDATE this file
