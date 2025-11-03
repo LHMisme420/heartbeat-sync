@@ -1063,3 +1063,88 @@ def enterprise_dashboard():
 @app.route('/api/enterprise')
 def enterprise_dashboard():
     return "HR dashboard for employee connection metrics"
+# Clone YOUR repository
+git clone https://github.com/LHMisme420/heartbeat-sync.git
+cd heartbeat-sync
+
+# Navigate to core directory
+cd core
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the application
+python app.py
+# ❌ This won't work with the new structure
+from proof_of_spark import generate_spark_id, validate_proof_of_spark
+
+# ✅ Use relative import for same directory
+from .proof_of_spark import generate_spark_id, validate_proof_of_spark
+
+# OR if that fails, use absolute import
+import sys
+import os
+sys.path.append(os.path.dirname(__file__))
+from proof_of_spark import generate_spark_id, validate_proof_of_spark
+# core/__init__.py - Empty file to make core a proper Python package
+# Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/LHMisme420/heartbeat-sync.git
+cd heartbeat-sync
+
+# Install dependencies
+pip install -r core/requirements.txt
+
+# Run the application
+cd core
+python app.py
+
+### **5. Add the Stats Endpoint You Wanted:**
+```python
+# Add to core/app.py after your existing routes
+import random
+
+@app.route('/api/stats')
+def get_stats():
+    """Demo stats endpoint for traction metrics"""
+    return jsonify({
+        'users_connected': random.randint(500, 2000),
+        'successful_sparks': random.randint(100, 500),
+        'avg_mood_improvement': '+2.3 points',
+        'communities_active': 6,
+        'fate_credits_minted': random.randint(200, 800),
+        'connection_success_rate': '87%'
+    })
+
+@app.route('/api/enterprise')
+def enterprise_dashboard():
+    """Enterprise wellness integration demo"""
+    return jsonify({
+        'feature': 'Corporate Wellness Dashboard',
+        'metrics': ['team_connection_score', 'employee_wellness_index'],
+        'status': 'Ready for integration',
+        'use_case': 'HR employee connection programs'
+    })
+heartbeat-sync/ (your repo)
+├── core/
+│   ├── __init__.py
+│   ├── app.py
+│   ├── proof_of_spark.py
+│   ├── demo.py
+│   ├── web3_nudge.py
+│   └── requirements.txt
+├── templates/
+│   ├── index.html
+│   └── ar_demo.html
+├── docs/
+│   └── ETHICS_CHARTER.md
+└── README.md
+# Test the core matching engine
+cd core
+python demo.py
+
+# Test the web server
+python app.py
+# Then visit http://localhost:5000
