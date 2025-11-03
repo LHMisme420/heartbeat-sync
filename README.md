@@ -1,8 +1,20 @@
-# heartbeat-sync
-"Prototype for serendipitous human connections via mood/location matching."
-git clone https://github.com/LHMISME420/heartbeat-sync.git
-import random
-import pandas as pd
+
+# ❤️ Heartbeat-Sync: Protocol for Human Connection
+
+> Fighting the loneliness epidemic through anonymous, serendipitous connections
+
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/LHMisme420/heartbeat-sync.git
+
+# Navigate to core directory and install dependencies
+cd heartbeat-sync/core
+pip install -r requirements.txt
+
+# Run the application
+python app.py
 
 # Mock data for users: location, mood score (0-10), interests
 users = [
