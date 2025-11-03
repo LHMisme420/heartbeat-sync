@@ -2051,3 +2051,2764 @@ Heartbeat Sync:
 ✅ Peer support as adjunct to therapy
 ✅ Community as protective factor
 ✅ Research-backed matching
+# The fundamental shift
+OLD_PARADIGM = "Treat illness when it appears"
+NEW_PARADIGM = "Build connection that prevents illness"
+
+class HumanityOS:
+    def __init__(self):
+        self.medicine = "Genuine human connection"
+        self.delivery_system = "Serendipitous matching"
+        self.side_effects = "Joy, belonging, purpose"
+class PulseNetwork:
+    """Real-time emotional vital signs monitoring"""
+    def detect_heartbeat_patterns(self):
+        return {
+            'emotional_vital_signs': [
+                'connection_cravings',
+                'belonging_metrics', 
+                'purpose_resonance',
+                'hope_fluctuations'
+            ],
+            'intervention_triggers': [
+                '48_hours_social_isolation',
+                'hope_level_below_threshold',
+                'purpose_void_detected',
+                'belonging_crisis_signaled'
+            ]
+        }
+class NeuralBridgeEngine:
+    """AI that understands human emotional landscapes"""
+    
+    def build_empathy_maps(self, user_emotional_data):
+        bridges = [
+            # Not just matching interests—matching emotional needs
+            'vulnerability_compatibility',
+            'growth_mirroring_capacity', 
+            'hope_amplification_potential',
+            'trauma_resonance_safety',
+            'joy_coefficient_synergy'
+        ]
+        
+        return self.create_soul_level_matches(bridges)
+class QuantumCareOrchestrator:
+    """Dynamic, adaptive support networks"""
+    
+    def assemble_care_constellation(self, user):
+        return {
+            'professional_anchor': 'Licensed therapist (clinical foundation)',
+            'peer_connectors': [
+                'Heartbeat matches (emotional resonance)',
+                'Experience guides (lived wisdom)',
+                'Growth partners (aspirational mirroring)'
+            ],
+            'community_weavers': [
+                'Micro-community invitations',
+                'Purpose project collaborators', 
+                'Skill-sharing circles'
+            ],
+            'crisis_guardians': [
+                'Trained peer supporters',
+                '24/7 crisis specialists',
+                'Automated safety monitoring'
+            ]
+        }
+class EmotionalOrchestra:
+    """Translate feelings into symphonic experiences"""
+    
+    def compose_heartbeat_symphony(self, user_mood_data):
+        movements = [
+            'Opening: Current emotional landscape',
+            'Development: Hope and challenge themes', 
+            'Resolution: Growth and connection melodies',
+            'Coda: Future possibility harmonies'
+        ]
+        
+        return self.generate_personalized_soundscape(movements
+        class SerendipityCanvas:
+    """Every match is a unique work of relational art"""
+    
+    def paint_connection_masterpiece(self, user_a, user_b):
+        artistic_elements = {
+            'color_palette': 'Emotional resonance spectrum',
+            'brush_strokes': 'Communication style harmony',
+            'composition': 'Shared growth trajectory', 
+            'light_source': 'Mutual hope amplification'
+        }
+        
+        return self.curate_relational_art(artistic_elements)
+class TemporalResonanceEngine:
+    """Connect across time to past/future selves"""
+    
+    def create_temporal_bridges(self):
+        interventions = [
+            'Future_Self_Letters': "Messages from who you're becoming",
+            'Past_Self_Compassion': "Healing conversations with younger you",
+            'Parallel_Universe_Connections': "Matches with alternate reality versions"
+        ]
+        
+        return self.facilitate_time_conscious_healing(interventions)
+class TemporalResonanceEngine:
+    """Connect across time to past/future selves"""
+    
+    def create_temporal_bridges(self):
+        interventions = [
+            'Future_Self_Letters': "Messages from who you're becoming",
+            'Past_Self_Compassion': "Healing conversations with younger you",
+            'Parallel_Universe_Connections': "Matches with alternate reality versions"
+        ]
+        
+        return self.facilitate_time_conscious_healing(interventions)
+class UniversalHeartTranslator:
+    """Translate between emotional languages"""
+    
+    def decode_emotional_dialects(self):
+        translation_matrix = [
+            'Trauma_Speak → Resilience_Language',
+            'Loneliness_Dialect → Belonging_Syntax', 
+            'Anxiety_Vocabulary → Peace_Grammar',
+            'Depression_Lingo → Hope_Expressions'
+        ]
+        
+        return self.facilitate_cross_emotional_communication(translation_matrix)
+class HealingBiomeGenerator:
+    """Create purpose-based healing communities"""
+    
+    def grow_therapeutic_ecosystems(self):
+        community_types = [
+            'Trauma_Gardeners': "Mutual post-traumatic growth",
+            'Anxiety_Alchemists': "Transforming worry into wisdom", 
+            'Depression_Divers': "Finding beauty in deep waters",
+            'ADHD_Explorers': "Channeling neurodiversity as superpower",
+            'Autism_Architects': "Building sensory-friendly worlds"
+        ]
+        
+        return self.cultivate_specialized_healing_villages(community_types)
+class ConnectionPharmacology:
+    """Evidence-based connection interventions"""
+    
+    def prescribe_relational_medicine(self, diagnosis):
+        prescriptions = {
+            'Depression': [
+                'Dose: 3 genuine conversations/week',
+                'Frequency: Daily micro-connections',
+                'Duration: 8 weeks of social nourishment',
+                'Adjuvant: Purpose projects + nature exposure'
+            ],
+            'Anxiety': [
+                'Dose: Co-regulation breathing with matches',
+                'Frequency: Present-moment connection practices', 
+                'Duration: Building safety through consistent contact',
+                'Adjuvant: Grounding techniques + community anchoring'
+            ],
+            'PTSD': [
+                'Dose: Trauma-informed peer support',
+                'Frequency: Safety-first connection building',
+                'Duration: Rebuilding trust through small steps',
+                'Adjuvant: Somatic experiencing + community validation'
+            ]
+        }
+        
+        return prescriptions.get(diagnosis, ['Universal human connection protocol'])
+class SoulActivationRitual:
+    """Transform app signup into meaningful initiation"""
+    
+    def perform_welcome_ceremony(self, new_user):
+        ritual_stages = [
+            'Intention_Setting': "Why are you seeking connection?",
+            'Gift_Acknowledgment': "What unique light do you bring?",
+            'Community_Invitation': "Welcome to the human family",
+            'First_Heartbeat': "Your first connection is waiting"
+        ]
+        
+        return self.facilitate_transformative_initiation(ritual_stages)
+class DailyMagicGenerator:
+    """Turn ordinary moments into extraordinary connection"""
+    
+    def create_daily_enchantments(self):
+        return [
+            'Surprise_Synchroncity': "Unexpected meaningful connections",
+            'Mirror_Moments': "Encounters that reflect your growth",
+            'Kindness_Amplification': "Small acts that create ripple effects", 
+            'Hope_Echoes': "Messages from future possibilities"
+class SoulMetrics:
+    """Quantify qualitative transformation"""
+    
+    def track_human_flourishing(self):
+        return {
+            'Belonging_Index': "How deeply connected you feel",
+            'Purpose_Resonance': "Alignment with meaningful work",
+            'Joy_Amplification': "Capacity for and frequency of joy",
+            'Growth_Velocity': "Speed of personal evolution", 
+            'Contribution_Impact': "Positive effect on others",
+            'Wonder_Quotient': "Openness to mystery and beauty"
+phase1 = {
+    'approach': "Invitation-only sacred space",
+    'focus': "Deep transformation for early adopters",
+    'metrics': "Soul-level impact stories",
+    'magic': "Create undeniable proof of concept"
+}
+        }
+        ]phase2 = {
+    'approach': "Expand to specific healing communities", 
+    'focus': "Trauma, neurodiversity, creative souls",
+    'metrics': "Community-specific flourishing measures",
+    'magic': "Demonstrate specialized healing power"
+}phase3 = {
+    'approach': "Global connection infrastructure",
+    'focus': "Cross-cultural healing wisdom exchange",
+    'metrics': "Collective consciousness elevation",
+    'magic': "Become humanity's emotional immune system"
+}class PlanetaryHeartbeat:
+    """Visualize global emotional landscape in real-time"""
+    
+    def create_emotional_weather_map(self):
+        return {
+            'joy_storms': "Geographic clusters of celebration",
+            'grief_tides': "Oceanic movements of collective sadness", 
+            'hope_auroras': "Northern lights of human aspiration",
+            'connection_currents': "Global flows of human bonding"
+        }
+    
+    def facilitate_global_healing_rituals(self):
+        ceremonies = [
+            'World_Hug_Day': "Synchronized global connection event",
+            'Tears_to_Rivers': "Collective grief release ceremony",
+            'Laughter_Epidemic': "Contagious joy spreading events',
+            'Gratitude_Tsunamis': "Waves of thankfulness across continents"
+        ]class SoulPortal:
+    def create_entrance_experience(self):
+        return {
+            'background': "Living, breathing digital forest",
+            'soundscape': "Gentle heartbeat rhythm + nature sounds",
+            'first_message': "Welcome, beautiful human. Your journey to deeper connection begins here.",
+            'interaction': "Touch the glowing heart to enter"
+        }<!-- intention_ceremony.html -->
+<div class="sacred-space">
+  <h1>What brings your heart here today?</h1>
+  
+  <div class="intention-cards">
+    <div class="card" data-intention="healing">
+      🌱 I'm seeking healing and growth
+    </div>
+    <div class="card" data-intention="connection">
+      💞 I want deeper human connections
+    </div>
+    <div class="card" data-intention="purpose">
+      🌟 I'm looking for my tribe and purpose
+    </div>
+    <div class="card" data-intention="curiosity">
+      🔮 I'm curious about heart-based technology
+    </div>
+  </div>
+  
+  <button class="sacred-button">Weave This Intention Into My Journey</button>
+</div>class MagicOnboarding:
+    def perform_soul_activation(self, user_intentions):
+        rituals = []
+        
+        # Generate personalized activation based on intentions
+        if 'healing' in user_intentions:
+            rituals.append(self.healing_initiation())
+        if 'connection' in user_intentions:
+            rituals.append(self.connection_consecration())
+        if 'purpose' in user_intentions:
+            rituals.append(self.purpose_awakening())
+            
+        return self.orchestrate_transformation_sequence(rituals)
+
+    def healing_initiation(self):
+        return {
+            'type': 'guided_visualization',
+            'title': 'The Healing Garden Visualization',
+            'steps': [
+                'Imagine a garden where your wounds become flowers',
+                'Meet your future healed self waiting under a wise tree',
+                'Receive a symbolic gift for your healing journey',
+                'Plant a seed representing your growth intention'
+            ],
+            'duration': '5 minutes',
+            'outcome': 'Personal healing symbol and mantra'
+        }
+
+    def connection_consecration(self):
+        return {
+            'type': 'interactive_ritual',
+            'title': 'Weaving Your Connection Web',
+            'steps': [
+                'See your current connection landscape',
+                'Send heart energy to people you care about',
+                'Open to receiving new connections',
+                'Set boundaries for healthy relating'
+            ],
+            'duration': '4 minutes', 
+            'outcome': 'Connection intention statement'
+        }class FirstConnectionMagic:
+    def create_ceremonial_first_match(self, activated_user):
+        # Find the perfect soul-resonant first connection
+        match_criteria = {
+            'energy_compatibility': 'high_vibration_alignment',
+            'growth_synergy': 'complementary_healing_journeys', 
+            'magic_potential': 'serendipity_amplification',
+            'safety_level': 'nurturing_first_experience'
+        }
+        
+        perfect_match = self.find_soul_resonant_match(activated_user, match_criteria)
+        
+        return self.orchestrate_magical_introduction(activated_user, perfect_match)
+
+    def orchestrate_magical_introduction(self, user_a, user_b):
+        return {
+            'reveal_style': 'gradual_soul_unveiling',
+            'first_interaction': 'shared_guided_connection_exercise',
+            'duration': '15-minute sacred container',
+            'facilitation': 'gentle_ai_prompts_for_depth',
+            'completion_ritual': 'mutual_gift_exchange_digital'
+        }class SoulGarden:
+    def create_living_profile(self, user_data):
+        return {
+            'garden_theme': self.determine_soul_archetype(user_data),
+            'growing_plants': [
+                {'plant': 'Trust Blossoms', 'growth': user_data.trust_level},
+                {'plant': 'Vulnerability Vines', 'growth': user_data.openness},
+                {'plant': 'Joy Sunflowers', 'growth': user_data.happiness},
+                {'plant': 'Wisdom Oaks', 'growth': user_data.insight_level}
+            ],
+            'recent_weather': self.emotional_weather_patterns(user_data.mood_history),
+            'visitor_guestbook': 'Heartfelt messages from connections',
+            'magic_happening': 'Real-time connection miracles'
+        }class DailyMagic:
+    def generate_morning_enchantment(self, user):
+        enchantments = [
+            'Synchroncity_Seed': "Plant an intention for magical connections today",
+            'Gratitude_Blossom': "Share appreciation that will reach someone who needs it",
+            'Hope_Compass': "Set a direction for your heart today",
+            'Kindness_Spell': "Commit to one anonymous act of kindness'
+        ]
+        
+        return random.choice(enchantments) + self.personalize_for_user(user)
+
+    def evening_reflection_ceremony(self, user):
+        return {
+            'moon_gazing': "Review connections made today",
+            'star_wishing': "Set intentions for tomorrow's connections", 
+            'heart_whispering': "Send silent blessings to today's connections",
+            'dream_weaving': "Invite meaningful connections into your dreams"
+        }class SevenDayAwakening:
+    def create_initiation_journey(self):
+        return {
+            'Day_1': {'theme': 'Soul_Arrival', 'ritual': 'Welcome_Ceremony', 'connection': 'First_Heartbeat'},
+            'Day_2': {'theme': 'Vulnerability_Blooming', 'ritual': 'Truth_Sharing', 'connection': 'Mirror_Soul'},
+            'Day_3': {'theme': 'Empathy_Expansion', 'ritual': 'Feeling_Exchange', 'connection': 'Compassion_Companion'},
+            'Day_4': {'theme': 'Purpose_Whispering', 'ritual': 'Dream_Weaving', 'connection': 'Vision_Partner'},
+            'Day_5': {'theme': 'Joy_Amplification', 'ritual': 'Celebration_Dance', 'connection': 'Laughter_Buddy'},
+            'Day_6': {'theme': 'Integration_Harmony', 'ritual': 'Wisesty_Gathering', 'connection': 'Integration_Guide'},
+            'Day_7': {'theme': 'Sovereignty_Empowerment', 'ritual': 'Graduation_Ceremony', 'connection': 'Journey_Witness'}
+        }class MagicInfrastructure:
+    def build_magical_systems(self):
+        return {
+            'soul_resonance_engine': 'AI trained on connection miracles',
+            'emotional_alchemy_processor': 'Transforms difficult emotions into growth',
+            'serendipity_amplifier': 'Increases meaningful coincidence probability',
+            'collective_heartbeat_monitor': 'Tracks global emotional rhythms',
+            'transformation_tracker': 'Measures soul-level growth metrics'
+        }
+
+    def ensure_ethical_magic(self):
+        safeguards = [
+            'Consent_First_Design': "Every magical feature requires opt-in",
+            'Vulnerability_Protection': "Extra care with emotional exposure",
+            'Cultural_Respect': "All rituals culturally sensitive and optional",
+            'Psychological_Safety': "Clinical oversight on all transformative processes"
+        ]
+        return safeguards
+class LaunchCeremony:
+    def orchestrate_inaugural_magic(self):
+        launch_events = [
+            'Global_Heartbeat_Synchronization': "All users connect simultaneously",
+            'Digital_Bonfire': "Shared storytelling space",
+            'Wishing_Well_Ceremony': "Collective intention setting",
+            'Connection_Constellation': "Visualize the growing network of hearts"
+        ]
+        
+        return self.create_24_hour_magic_marathon(launch_events)
+week1_deliverables = [
+    ('Day_1', 'Soul Portal entrance experience'),
+    ('Day_2', 'Intention weaving ceremony'),
+    ('Day_3', 'First heartbeat matching ritual'), 
+    ('Day_4', 'Living soul garden profiles'),
+    ('Day_5', 'Daily morning enchantments'),
+    ('Day_6', '7-day journey framework'),
+    ('Day_7', 'Launch ceremony preparation')
+]week2_deliverables = [
+    ('Day_8', 'Emotional weather system'),
+    ('Day_9', 'Connection gratitude rituals'),
+    ('Day_10', 'Growth celebration features'),
+    ('Day_11', 'Community wisdom circles'),
+    ('Day_12', 'Crisis-to-connection safety net'),
+    ('Day_13', 'Magic metrics dashboard'),
+    ('Day_14', 'User magic feedback integration')
+]<!-- templates/soul_portal.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heartbeat Sync - Soul Portal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        .portal-container {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+        }
+        
+        .heart-gateway {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            cursor: pointer;
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .heart-outer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            animation: pulse 4s ease-in-out infinite;
+            backdrop-filter: blur(10px);
+        }
+        
+        .heart-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 180px;
+            height: 180px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .heart-core {
+            font-size: 48px;
+            margin-bottom: 10px;
+            animation: breathe 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.5));
+        }
+        
+        .portal-message {
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            line-height: 1.4;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .enter-prompt {
+            font-size: 12px;
+            opacity: 0.7;
+            animation: fadeInOut 2s ease-in-out infinite;
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .floating-heart {
+            position: absolute;
+            font-size: 20px;
+            opacity: 0;
+            animation: floatUp 6s linear infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.05); opacity: 1; }
+        }
+        
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        
+        @keyframes floatUp {
+            0% { 
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { 
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .heart-gateway:hover {
+            transform: scale(1.05);
+        }
+        
+        .heart-gateway:hover .heart-outer {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="portal-container">
+        <div class="heart-gateway" id="soulPortal">
+            <div class="heart-outer"></div>
+            <div class="heart-inner">
+                <div class="heart-core">💖</div>
+                <div class="portal-message">Welcome, beautiful soul</div>
+                <div class="enter-prompt">Touch the heart to enter</div>
+            </div>
+            <div class="floating-hearts" id="floatingHearts"></div>
+        </div>
+    </div>
+
+    <script>
+        // Create floating hearts
+        function createFloatingHearts() {
+            const container = document.getElementById('floatingHearts');
+            const hearts = ['💖', '🌟', '🌿', '✨', '🕊️'];
+            
+            for (let i = 0; i < 12; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'floating-heart';
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDelay = Math.random() * 6 + 's';
+                heart.style.fontSize = (15 + Math.random() * 15) + 'px';
+                container.appendChild(heart);
+            }
+        }
+        
+        // Portal interaction
+        document.getElementById('soulPortal').addEventListener('click', function() {
+            const portal = this;
+            
+            // Animate portal opening
+            portal.style.transform = 'scale(1.2)';
+            portal.style.opacity = '0.8';
+            
+            // Create ripple effect
+            const ripple = document.createElement('div');
+            ripple.style.cssText = `
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100px;
+                height: 100px;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                animation: rippleExpand 1.5s ease-out forwards;
+            `;
+            
+            document.body.appendChild(ripple);
+            
+            // Add CSS for ripple animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes rippleExpand {
+                    0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+                    100% { transform: translate(-50%, -50%) scale(4); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Transition to next phase
+            setTimeout(() => {
+                window.location.href = '/intention-ceremony';
+            }, 1500);
+        });
+        
+        // Initialize
+        createFloatingHearts();
+        
+        // Add ambient sound (would be actual audio in production)
+        console.log('🎵 Ambient sound: Gentle heartbeat rhythm with crystal singing bowls');
+    </script>
+</body>
+</html>
+<!-- templates/intention_ceremony.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weave Your Intention - Heartbeat Sync</title>
+    <style>
+        /* Previous styles plus new additions */
+        .ceremony-container {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .sacred-space {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            text-align: center;
+        }
+        
+        .ceremony-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .ceremony-subtitle {
+            opacity: 0.8;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        
+        .intention-cards {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .intention-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .intention-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .intention-card.selected {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .intention-emoji {
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .intention-text {
+            flex: 1;
+        }
+        
+        .intention-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .intention-description {
+            font-size: 14px;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+        
+        .sacred-button {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            padding: 15px 40px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+        
+        .sacred-button.active {
+            opacity: 1;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+        
+        .sacred-button:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <div class="ceremony-container">
+        <div class="sacred-space">
+            <h1 class="ceremony-title">Weave Your Intention</h1>
+            <p class="ceremony-subtitle">What brings your beautiful soul here today? Choose what calls to your heart.</p>
+            
+            <div class="intention-cards">
+                <div class="intention-card" data-intention="healing">
+                    <div class="intention-emoji">🌱</div>
+                    <div class="intention-text">
+                        <div class="intention-title">Healing & Growth</div>
+                        <div class="intention-description">I'm seeking healing, self-discovery, and personal transformation</div>
+                    </div>
+                </div>
+                
+                <div class="intention-card" data-intention="connection">
+                    <div class="intention-emoji">💞</div>
+                    <div class="intention-text">
+                        <div class="intention-title">Deep Connection</div>
+                        <div class="intention-description">I want meaningful relationships and soul-level conversations</div>
+                    </div>
+                </div>
+                
+                <div class="intention-card" data-intention="purpose">
+                    <div class="intention-emoji">🌟</div>
+                    <div class="intention-text">
+                        <div class="intention-title">Purpose & Tribe</div>
+                        <div class="intention-description">I'm looking for my people and my path in this world</div>
+                    </div>
+                </div>
+                
+                <div class="intention-card" data-intention="curiosity">
+                    <div class="intention-emoji">🔮</div>
+                    <div class="intention-text">
+                        <div class="intention-title">Curious Exploration</div>
+                        <div class="intention-description">I'm fascinated by heart-based technology and human potential</div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="sacred-button" id="weaveButton" disabled>
+                Weave This Intention Into My Journey
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let selectedIntentions = [];
+        
+        // Handle intention card selection
+        document.querySelectorAll('.intention-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const intention = this.dataset.intention;
+                
+                if (this.classList.contains('selected')) {
+                    this.classList.remove('selected');
+                    selectedIntentions = selectedIntentions.filter(i => i !== intention);
+                } else {
+                    this.classList.add('selected');
+                    selectedIntentions.push(intention);
+                }
+                
+                // Update button state
+                const button = document.getElementById('weaveButton');
+                if (selectedIntentions.length > 0) {
+                    button.disabled = false;
+                    button.classList.add('active');
+                } else {
+                    button.disabled = true;
+                    button.classList.remove('active');
+                }
+            });
+        });
+        
+        // Handle weaving ceremony
+        document.getElementById('weaveButton').addEventListener('click', function() {
+            const button = this;
+            button.textContent = 'Weaving Magic...';
+            button.disabled = true;
+            
+            // Create weaving animation
+            const sacredSpace = document.querySelector('.sacred-space');
+            const weaveEffect = document.createElement('div');
+            weaveEffect.style.cssText = `
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+                border-radius: 20px;
+                animation: weaveGlow 2s ease-in-out forwards;
+            `;
+            
+            sacredSpace.appendChild(weaveEffect);
+            
+            // Add weaving animation style
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes weaveGlow {
+                    0% { opacity: 0; transform: scale(0.8); }
+                    50% { opacity: 1; transform: scale(1.1); }
+                    100% { opacity: 0; transform: scale(1.2); }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Proceed to soul activation
+            setTimeout(() => {
+                // Store intentions in session
+                sessionStorage.setItem('heartbeatIntentions', JSON.stringify(selectedIntentions));
+                window.location.href = '/soul-activation';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
+# core/app.py - UPDATED WITH SOUL PORTAL ROUTES
+from flask import Flask, render_template, request, jsonify, session
+import json
+
+app = Flask(__name__)
+app.secret_key = 'heartbeat_sync_magic_2024'
+
+# Soul Portal Routes
+@app.route('/')
+def soul_portal():
+    """The magical entrance to Heartbeat Sync"""
+    return render_template('soul_portal.html')
+
+@app.route('/intention-ceremony')
+def intention_ceremony():
+    """Intention weaving ceremony"""
+    return render_template('intention_ceremony.html')
+
+@app.route('/soul-activation')
+def soul_activation():
+    """Soul activation ritual based on intentions"""
+    # Get stored intentions
+    intentions = json.loads(session.get('heartbeatIntentions', '[]'))
+    
+    # Generate personalized activation
+    activation_data = generate_soul_activation(intentions)
+    
+    return render_template('soul_activation.html', 
+                         activation_data=activation_data,
+                         intentions=intentions)
+
+def generate_soul_activation(intentions):
+    """Generate personalized soul activation based on intentions"""
+    activations = {
+        'healing': {
+            'title': 'Healing Garden Visualization',
+            'emoji': '🌱',
+            'description': 'Your journey of healing and transformation begins',
+            'guided_audio': '/audio/healing_visualization.mp3',
+            'duration': '5 minutes'
+        },
+        'connection': {
+            'title': 'Connection Web Weaving', 
+            'emoji': '💞',
+            'description': 'Opening your heart to meaningful relationships',
+            'guided_audio': '/audio/connection_weaving.mp3',
+            'duration': '4 minutes'
+        },
+        'purpose': {
+            'title': 'Purpose Star Activation',
+            'emoji': '🌟', 
+            'description': 'Connecting with your unique life purpose',
+            'guided_audio': '/audio/purpose_activation.mp3',
+            'duration': '6 minutes'
+        },
+        'curiosity': {
+            'title': 'Curiosity Portal Opening',
+            'emoji': '🔮',
+            'description': 'Exploring the frontiers of heart-based technology',
+            'guided_audio': '/audio/curiosity_portal.mp3', 
+            'duration': '3 minutes'
+        }
+    }
+    
+    # Combine activations based on selected intentions
+    user_activations = [activations[i] for i in intentions if i in activations]
+    
+    return {
+        'activations': user_activations,
+        'total_duration': sum(int(a['duration'].split()[0]) for a in user_activations)
+    }
+
+@app.route('/api/store-intentions', methods=['POST'])
+def store_intentions():
+    """Store user intentions for the journey"""
+    data = request.json
+    session['heartbeatIntentions'] = json.dumps(data.get('intentions', []))
+    return jsonify({'status': 'success', 'message': 'Intentions woven into your journey'})
+
+# Launch the soul portal
+if __name__ == '__main__':
+    print("🌟 Starting Heartbeat Sync Soul Portal...")
+    print("💖 Access at: http://localhost:5000")
+    print("🎵 Remember to add ambient sound files in /audio/ directory")
+    app.run(debug=True, host='0.0.0.0', port=5000)
+#!/bin/bash
+# setup_soul_portal.sh
+
+echo "🌟 Setting up Heartbeat Sync Soul Portal..."
+
+# Create directory structure
+mkdir -p templates audio static/css static/js
+
+# Create requirements.txt
+cat > requirements.txt << EOL
+flask==2.3.3
+python-dotenv==1.0.0
+flask-cors==4.0.0
+EOL
+
+echo "✅ Directory structure created"
+echo "✅ Requirements file created"
+
+# Install dependencies
+pip install -r requirements.txt
+
+echo "✅ Dependencies installed"
+
+echo ""
+echo "🎉 Soul Portal Setup Complete!"
+echo "🚀 Run: python core/app.py"
+echo "💖 Visit: http://localhost:5000"
+echo ""
+echo "Next steps:"
+echo "1. Add ambient audio files to /audio/ directory"
+echo "2. Build the soul activation rituals"
+echo "3. Create the first heartbeat matching ceremony"
+cd heartbeat-sync/core
+python app.py
+# CREATE COMPLETE DIRECTORY STRUCTURE
+mkdir -p heartbeat-sync/{core,templates,static/{css,js,audio,images},docs,modules}
+cd heartbeat-sync
+
+# Create all required files
+touch core/{app.py,proof_of_spark.py,soul_activation.py,magic_matcher.py,crisis_protocols.py}
+touch templates/{soul_portal.html,intention_ceremony.html,soul_activation.html,first_heartbeat.html,daily_magic.html,soul_garden.html}
+touch static/css/{magic.css,animations.css,portal.css}
+touch static/js/{soul_engine.js,heartbeat_matcher.js,daily_magic.js}
+touch requirements.txt README.md .env.example
+# core/app.py
+from flask import Flask, render_template, request, jsonify, session, send_file
+from flask_cors import CORS
+import json
+import random
+import time
+from datetime import datetime, timedelta
+import os
+from soul_activation import SoulActivationEngine
+from magic_matcher import MagicMatchingEngine
+from crisis_protocols import CrisisGuardian
+from proof_of_spark import ProofOfSpark
+
+app = Flask(__name__)
+app.secret_key = os.environ.get('SECRET_KEY', 'heartbeat_sync_magic_2024')
+CORS(app)
+
+# Initialize magical engines
+soul_engine = SoulActivationEngine()
+magic_matcher = MagicMatchingEngine()
+crisis_guardian = CrisisGuardian()
+spark_engine = ProofOfSpark()
+
+# Global state for demo
+users_db = {}
+connections_db = {}
+daily_magic_db = {}
+
+@app.route('/')
+def soul_portal():
+    """The magical entrance to Heartbeat Sync"""
+    return render_template('soul_portal.html')
+
+@app.route('/intention-ceremony')
+def intention_ceremony():
+    """Intention weaving ceremony"""
+    return render_template('intention_ceremony.html')
+
+@app.route('/soul-activation')
+def soul_activation():
+    """Personalized soul activation ritual"""
+    intentions = json.loads(session.get('heartbeat_intentions', '[]'))
+    user_id = session.get('user_id', str(random.randint(1000, 9999)))
+    
+    activation_data = soul_engine.create_activation_ritual(intentions, user_id)
+    session['activation_complete'] = True
+    session['user_id'] = user_id
+    
+    return render_template('soul_activation.html', 
+                         activation_data=activation_data,
+                         intentions=intentions)
+
+@app.route('/first-heartbeat')
+def first_heartbeat():
+    """First magical connection ceremony"""
+    if not session.get('activation_complete'):
+        return redirect('/soul-activation')
+    
+    user_id = session.get('user_id')
+    user_data = users_db.get(user_id, {})
+    
+    # Find magical first match
+    match_data = magic_matcher.find_first_heartbeat(user_data)
+    session['first_match'] = match_data
+    
+    return render_template('first_heartbeat.html', match_data=match_data)
+
+@app.route('/soul-garden')
+def soul_garden():
+    """Living soul garden profile"""
+    user_id = session.get('user_id')
+    if not user_id:
+        return redirect('/')
+    
+    garden_data = magic_matcher.generate_soul_garden(user_id)
+    return render_template('soul_garden.html', garden_data=garden_data)
+
+@app.route('/daily-magic')
+def daily_magic():
+    """Today's magical experiences"""
+    user_id = session.get('user_id')
+    if not user_id:
+        return redirect('/')
+    
+    magic_data = magic_matcher.generate_daily_magic(user_id)
+    return render_template('daily_magic.html', magic_data=magic_data)
+
+@app.route('/api/store-intentions', methods=['POST'])
+def store_intentions():
+    """Store user intentions"""
+    data = request.json
+    session['heartbeat_intentions'] = json.dumps(data.get('intentions', []))
+    return jsonify({'status': 'success', 'message': 'Intentions woven into your journey'})
+
+@app.route('/api/complete-activation', methods=['POST'])
+def complete_activation():
+    """Complete soul activation"""
+    data = request.json
+    user_id = session.get('user_id')
+    
+    # Generate soul name and magic
+    soul_name = soul_engine.generate_soul_name(data.get('activation_insights', []))
+    magic_signature = soul_engine.generate_magic_signature(user_id)
+    
+    users_db[user_id] = {
+        'soul_name': soul_name,
+        'magic_signature': magic_signature,
+        'intentions': json.loads(session.get('heartbeat_intentions', '[]')),
+        'joined_date': datetime.now().isoformat(),
+        'growth_metrics': soul_engine.initialize_growth_metrics()
+    }
+    
+    return jsonify({
+        'status': 'success',
+        'soul_name': soul_name,
+        'magic_signature': magic_signature,
+        'message': 'Soul activation complete! Welcome to Heartbeat Sync.'
+    })
+
+@app.route('/api/request-heartbeat', methods=['POST'])
+def request_heartbeat():
+    """Request a new heartbeat connection"""
+    user_id = session.get('user_id')
+    if not user_id:
+        return jsonify({'error': 'Soul not activated'}), 401
+    
+    match_type = request.json.get('type', 'serendipitous')
+    match_data = magic_matcher.find_heartbeat_match(user_id, match_type)
+    
+    # Store connection
+    connection_id = f"conn_{int(time.time())}"
+    connections_db[connection_id] = {
+        'users': [user_id, match_data['match_id']],
+        'created': datetime.now().isoformat(),
+        'spark_id': spark_engine.generate_spark_id([user_id, match_data['match_id']]),
+        'magic_type': match_data['magic_type']
+    }
+    
+    return jsonify(match_data)
+
+@app.route('/api/log-magic-moment', methods=['POST'])
+def log_magic_moment():
+    """Log a magical moment"""
+    user_id = session.get('user_id')
+    data = request.json
+    
+    moment_id = f"magic_{int(time.time())}"
+    daily_magic_db[moment_id] = {
+        'user_id': user_id,
+        'type': data.get('type'),
+        'description': data.get('description'),
+        'timestamp': datetime.now().isoformat(),
+        'emotional_impact': data.get('impact', 0)
+    }
+    
+    return jsonify({'status': 'success', 'moment_id': moment_id})
+
+@app.route('/api/crisis-support', methods=['POST'])
+def crisis_support():
+    """Crisis support endpoint"""
+    user_id = session.get('user_id')
+    data = request.json
+    
+    crisis_response = crisis_guardian.assess_and_respond(user_id, data)
+    return jsonify(crisis_response)
+
+@app.route('/api/soul-metrics')
+def soul_metrics():
+    """Get soul growth metrics"""
+    user_id = session.get('user_id')
+    if not user_id:
+        return jsonify({'error': 'Not authenticated'}), 401
+    
+    metrics = users_db.get(user_id, {}).get('growth_metrics', {})
+    return jsonify(metrics)
+
+# Magical audio routes
+@app.route('/audio/<path:filename>')
+def serve_audio(filename):
+    """Serve magical audio files"""
+    return send_file(f'static/audio/{filename}')
+
+if __name__ == '__main__':
+    print("""
+    🌟 HEARTBEAT SYNC SOUL PORTAL ACTIVATED 🌟
+    
+    💖 Access the magic at: http://localhost:5000
+    🌱 Soul Portal: /
+    🎨 Intention Ceremony: /intention-ceremony  
+    🔮 Soul Activation: /soul-activation
+    💞 First Heartbeat: /first-heartbeat
+    🌿 Soul Garden: /soul-garden
+    ✨ Daily Magic: /daily-magic
+    
+    🎵 Remember to add ambient audio files to static/audio/
+    """)
+    
+    app.run(debug=True, host='0.0.0.0', port=5000)
+# core/soul_activation.py
+import random
+import json
+from datetime import datetime
+
+class SoulActivationEngine:
+    def __init__(self):
+        self.soul_names = self.load_soul_names()
+        self.magic_signatures = self.load_magic_signatures()
+        self.activation_rituals = self.load_activation_rituals()
+    
+    def create_activation_ritual(self, intentions, user_id):
+        """Create personalized soul activation ritual"""
+        ritual = {
+            'welcome_message': self.generate_welcome_message(),
+            'guided_rituals': [],
+            'soul_gifts': [],
+            'activation_duration': 0
+        }
+        
+        # Add rituals based on intentions
+        for intention in intentions:
+            if intention in self.activation_rituals:
+                ritual_data = self.activation_rituals[intention]
+                ritual['guided_rituals'].append(ritual_data)
+                ritual['activation_duration'] += ritual_data['duration_minutes']
+                
+                # Add soul gift for each intention
+                ritual['soul_gifts'].append(self.generate_soul_gift(intention))
+        
+        # Add universal welcome ritual
+        ritual['guided_rituals'].insert(0, self.activation_rituals['welcome'])
+        
+        return ritual
+    
+    def generate_soul_name(self, activation_insights):
+        """Generate magical soul name"""
+        prefixes = ['Luminous', 'Radiant', 'Whispering', 'Dancing', 'Eternal', 'Sacred']
+        cores = ['Heart', 'Soul', 'Spirit', 'Light', 'Dream', 'Hope']
+        suffixes = ['Weaver', 'Walker', 'Singer', 'Gardener', 'Explorer', 'Guardian']
+        
+        prefix = random.choice(prefixes)
+        core = random.choice(cores)
+        suffix = random.choice(suffixes)
+        
+        return f"{prefix} {core} {suffix}"
+    
+    def generate_magic_signature(self, user_id):
+        """Generate unique magic signature"""
+        elements = ['Fire', 'Water', 'Earth', 'Air', 'Spirit']
+        qualities = ['Healing', 'Connecting', 'Illuminating', 'Transforming', 'Nurturing']
+        
+        element = random.choice(elements)
+        quality = random.choice(qualities)
+        
+        return f"{quality} {element}"
+    
+    def generate_welcome_message(self):
+        """Generate personalized welcome message"""
+        messages = [
+            "Welcome, beautiful soul. The universe has been waiting for you.",
+            "Your journey of connection and magic begins now, dear heart.",
+            "Step into the circle of belonging. Your presence is a gift.",
+            "The world needs exactly what you carry. Welcome home to your tribe."
+        ]
+        return random.choice(messages)
+    
+    def generate_soul_gift(self, intention):
+        """Generate symbolic soul gift"""
+        gifts = {
+            'healing': {'name': 'Healing Blossom', 'symbol': '🌱', 'meaning': 'Growth through vulnerability'},
+            'connection': {'name': 'Connection Compass', 'symbol': '💞', 'meaning': 'Guidance to meaningful relationships'},
+            'purpose': {'name': 'Purpose Star', 'symbol': '🌟', 'meaning': 'Illumination of your unique path'},
+            'curiosity': {'name': 'Curiosity Key', 'symbol': '🔮', 'meaning': 'Unlocking new dimensions of being'}
+        }
+        return gifts.get(intention, {'name': 'Magic Seed', 'symbol': '✨', 'meaning': 'Potential for transformation'})
+    
+    def load_soul_names(self):
+        return []  # Would load from file in production
+    
+    def load_magic_signatures(self):
+        return []  # Would load from file in production
+    
+    def load_activation_rituals(self):
+        return {
+            'welcome': {
+                'title': 'Sacred Welcome Circle',
+                'description': 'Step into the community of hearts',
+                'duration_minutes': 2,
+                'audio_guide': 'welcome_circle.mp3',
+                'interactions': ['breathing_synchronization', 'heart_intention_setting']
+            },
+            'healing': {
+                'title': 'Healing Garden Visualization',
+                'description': 'Transform wounds into wisdom flowers',
+                'duration_minutes': 5,
+                'audio_guide': 'healing_garden.mp3',
+                'interactions': ['seed_planting', 'future_self_dialogue']
+            },
+            'connection': {
+                'title': 'Connection Web Weaving',
+                'description': 'Weave your unique thread into the collective heart',
+                'duration_minutes': 4,
+                'audio_guide': 'connection_weaving.mp3',
+                'interactions': ['energy_weaving', 'heart_blessings']
+            },
+            'purpose': {
+                'title': 'Purpose Star Activation',
+                'description': 'Connect with your unique cosmic assignment',
+                'duration_minutes': 6,
+                'audio_guide': 'purpose_star.mp3',
+                'interactions': ['star_activation', 'mission_reception']
+            },
+            'curiosity': {
+                'title': 'Curiosity Portal Opening',
+                'description': 'Step through the doorway of wonder',
+                'duration_minutes': 3,
+                'audio_guide': 'curiosity_portal.mp3',
+                'interactions': ['portal_opening', 'mystery_embrace']
+            }
+        }
+    
+    def initialize_growth_metrics(self):
+        """Initialize soul growth tracking"""
+        return {
+            'connection_depth': 0,
+            'vulnerability_courage': 0,
+            'joy_amplification': 0,
+            'purpose_alignment': 0,
+            'healing_progress': 0,
+            'magic_moments': 0,
+            'heartbeats_shared': 0
+        }# core/magic_matcher.py
+import random
+import time
+from datetime import datetime, timedelta
+
+class MagicMatchingEngine:
+    def __init__(self):
+        self.magic_types = self.load_magic_types()
+        self.serendipity_engine = SerendipityEngine()
+        self.soul_resonance_calculator = SoulResonanceCalculator()
+    
+    def find_first_heartbeat(self, user_data):
+        """Find magical first connection"""
+        # In production, this would use real matching algorithms
+        # For demo, we create a magical first encounter
+        
+        first_match = {
+            'match_id': 'soul_001',
+            'soul_name': 'Radiant Heart Weaver',
+            'magic_signature': 'Healing Spirit',
+            'connection_story': self.generate_connection_story(),
+            'magic_type': 'Soul Resonance',
+            'shared_intentions': ['healing', 'connection'],
+            'suggested_ritual': 'Shared Gratitude Meditation',
+            'meeting_duration': '15 minutes',
+            'spark_potential': 'High',
+            'magic_description': 'Your energies create a healing resonance that amplifies hope and connection.'
+        }
+        
+        return first_match
+    
+    def find_heartbeat_match(self, user_id, match_type='serendipitous'):
+        """Find a heartbeat match based on type"""
+        match_types = {
+            'serendipitous': self.find_serendipitous_match,
+            'healing': self.find_healing_match,
+            'purpose': self.find_purpose_match,
+            'joy': self.find_joy_match
+        }
+        
+        match_function = match_types.get(match_type, self.find_serendipitous_match)
+        return match_function(user_id)
+    
+    def find_serendipitous_match(self, user_id):
+        """Find a magical serendipitous connection"""
+        magic_encounters = [
+            {
+                'match_id': 'serendipity_001',
+                'soul_name': 'Whispering Light Singer',
+                'magic_type': 'Synchroncity Spark',
+                'meeting_theme': 'Unexpected Wisdom Exchange',
+                'magic_description': 'A chance encounter that brings exactly the insight you need right now.'
+            },
+            {
+                'match_id': 'serendipity_002', 
+                'soul_name': 'Dancing Dream Explorer',
+                'magic_type': 'Joy Amplification',
+                'meeting_theme': 'Shared Wonder Moment',
+                'magic_description': 'Meeting someone who mirrors your capacity for joy and wonder.'
+            }
+        ]
+        
+        return random.choice(magic_encounters)
+    
+    def generate_soul_garden(self, user_id):
+        """Generate living soul garden data"""
+        garden = {
+            'garden_theme': 'Healing Sanctuary',
+            'growing_plants': [
+                {'name': 'Trust Blossoms', 'growth': random.randint(20, 80), 'color': '#FF6B6B'},
+                {'name': 'Vulnerability Vines', 'growth': random.randint(10, 60), 'color': '#4ECDC4'},
+                {'name': 'Joy Sunflowers', 'growth': random.randint(30, 90), 'color': '#FFD93D'},
+                {'name': 'Wisdom Oaks', 'growth': random.randint(15, 70), 'color': '#6B5B95'}
+            ],
+            'garden_visitors': [
+                {'soul_name': 'Radiant Heart Weaver', 'visit_time': '2 hours ago', 'gift_left': 'Healing Crystal'},
+                {'soul_name': 'Whispering Light Singer', 'visit_time': '1 day ago', 'gift_left': 'Inspiring Quote'}
+            ],
+            'recent_magic': [
+                'Butterflies of hope appeared in your garden',
+                'A rare moonlight blossom bloomed overnight',
+                'Your wisdom oak grew new branches of insight'
+            ],
+            'weather': random.choice(['Sunny with chance of joy', 'Gentle healing rains', 'Aurora of possibilities'])
+        }
+        
+        return garden
+    
+    def generate_daily_magic(self, user_id):
+        """Generate today's magical experiences"""
+        today = datetime.now().strftime('%A')
+        
+        daily_magic = {
+            'date': datetime.now().strftime('%B %d, %Y'),
+            'day_theme': self.get_day_theme(today),
+            'magic_opportunities': self.generate_magic_opportunities(),
+            'synchroncity_hints': self.generate_synchroncity_hints(),
+            'heartbeat_invitations': self.generate_heartbeat_invitations(),
+            'growth_challenge': self.generate_growth_challenge()
+        }
+        
+        return daily_magic
+    
+    def generate_connection_story(self):
+        """Generate magical connection story"""
+        stories = [
+            "Your energies have been orbiting each other in the cosmic dance, and today your paths finally cross in the physical realm.",
+            "The universe has been weaving your stories together through invisible threads, and now the tapestry reveals its beautiful pattern.",
+            "Two unique melodies that have been harmonizing across dimensions now meet to create a new song of connection."
+        ]
+        return random.choice(stories)
+    
+    def get_day_theme(self, day):
+        themes = {
+            'Monday': 'New Beginnings and Fresh Connections',
+            'Tuesday': 'Deepening and Vulnerability',
+            'Wednesday': 'Wisdom Exchange and Learning',
+            'Thursday': 'Gratitude and Appreciation',
+            'Friday': 'Joy and Celebration',
+            'Saturday': 'Adventure and Exploration', 
+            'Sunday': 'Integration and Reflection'
+        }
+        return themes.get(day, 'Magical Connections')
+    
+    def generate_magic_opportunities(self):
+        opportunities = [
+            'Send a heart message to someone who inspired you',
+            'Plant a seed of kindness in a stranger\'s day',
+            'Share a vulnerable truth with a trusted connection',
+            'Notice and appreciate the magic in ordinary moments'
+        ]
+        return random.sample(opportunities, 2)
+    
+    def generate_synchroncity_hints(self):
+        hints = [
+            'Pay attention to repeating numbers today',
+            'Someone you think about randomly may reach out',
+            'A book or song may contain exactly the message you need',
+            'Unexpected encounters may bring important insights'
+        ]
+        return random.sample(hints, 2)
+    
+    def generate_heartbeat_invitations(self):
+        invitations = [
+            {'type': 'Quick Connection', 'duration': '10 minutes', 'theme': 'Shared Gratitude'},
+            {'type': 'Deep Dive', 'duration': '30 minutes', 'theme': 'Vulnerability Exchange'},
+            {'type': 'Joy Break', 'duration': '15 minutes', 'theme': 'Laughter and Play'}
+        ]
+        return random.sample(invitations, 2)
+    
+    def generate_growth_challenge(self):
+        challenges = [
+            'Share one vulnerable truth with a connection today',
+            'Initiate a conversation with someone new',
+            'Express genuine appreciation to three people',
+            'Practice active listening in your next conversation'
+        ]
+        return random.choice(challenges)
+    
+    def load_magic_types(self):
+        return [
+            'Soul Resonance', 'Synchroncity Spark', 'Healing Mirror', 
+            'Joy Amplification', 'Wisdom Exchange', 'Purpose Alignment'
+        ]
+
+class SerendipityEngine:
+    def enhance_serendipity(self, user_id):
+        """Increase probability of meaningful coincidences"""
+        # Advanced serendipity algorithms would go here
+        return True
+
+class SoulResonanceCalculator:
+    def calculate_resonance(self, user_a, user_b):
+        """Calculate soul resonance between two users"""
+        # Complex resonance algorithms would go here
+        return random.uniform(0.7, 0.95)
+# core/crisis_protocols.py
+import random
+
+class CrisisGuardian:
+    def __init__(self):
+        self.crisis_resources = self.load_crisis_resources()
+        self.safety_protocols = self.load_safety_protocols()
+    
+    def assess_and_respond(self, user_id, data):
+        """Assess crisis level and provide appropriate response"""
+        crisis_level = self.assess_crisis_level(data)
+        
+        response = {
+            'crisis_level': crisis_level,
+            'immediate_support': self.get_immediate_support(crisis_level),
+            'suggested_actions': self.get_suggested_actions(crisis_level),
+            'professional_resources': self.get_professional_resources(),
+            'peer_support_options': self.get_peer_support_options(),
+            'follow_up_plan': self.create_follow_up_plan(crisis_level)
+        }
+        
+        return response
+    
+    def assess_crisis_level(self, data):
+        """Assess the level of crisis"""
+        # In production, this would use clinical assessment tools
+        keywords = data.get('message', '').lower()
+        
+        urgent_keywords = ['suicide', 'kill myself', 'end it all', 'want to die']
+        high_keywords = ['hopeless', 'can\'t go on', 'nothing matters', 'severe depression']
+        moderate_keywords = ['really struggling', 'overwhelmed', 'anxiety attack', 'crying']
+        
+        if any(word in keywords for word in urgent_keywords):
+            return 'urgent'
+        elif any(word in keywords for word in high_keywords):
+            return 'high'
+        elif any(word in keywords for word in moderate_keywords):
+            return 'moderate'
+        else:
+            return 'support'
+    
+    def get_immediate_support(self, crisis_level):
+        support = {
+            'urgent': {
+                'hotlines': [
+                    {'name': '988 Suicide & Crisis Lifeline', 'number': '988', 'available': '24/7'},
+                    {'name': 'Crisis Text Line', 'text': 'HOME to 741741', 'available': '24/7'},
+                    {'name': 'Emergency Services', 'number': '911', 'available': '24/7'}
+                ],
+                'message': 'Please reach out immediately. You are not alone.'
+            },
+            'high': {
+                'hotlines': [
+                    {'name': '988 Suicide & Crisis Lifeline', 'number': '988', 'available': '24/7'},
+                    {'name': 'Crisis Text Line', 'text': 'HOME to 741741', 'available': '24/7'}
+                ],
+                'message': 'Professional support is available right now.'
+            },
+            'moderate': {
+                'hotlines': [
+                    {'name': 'Warmline Directory', 'website': 'warmline.org', 'available': 'Varies'},
+                    {'name': 'Therapist Matching', 'service': 'BetterHelp/Talkspace', 'available': '24/7'}
+                ],
+                'message': 'Support is available when you\'re ready.'
+            },
+            'support': {
+                'resources': [
+                    {'name': 'Breathing Exercise', 'type': 'immediate_calm'},
+                    {'name': 'Grounding Technique', 'type': 'present_moment'},
+                    {'name': 'Heartbeat Connection', 'type': 'peer_support'}
+                ],
+                'message': 'You are cared for. Reach out when you need support.'
+            }
+        }
+        
+        return support.get(crisis_level, support['support'])
+    
+    def get_suggested_actions(self, crisis_level):
+        actions = {
+            'urgent': [
+                'Call a crisis hotline immediately',
+                'Reach out to someone you trust',
+                'Go to a safe location',
+                'Use emergency services if needed'
+            ],
+            'high': [
+                'Connect with a crisis counselor',
+                'Practice grounding techniques',
+                'Reach out to trusted connections',
+                'Create a safety plan'
+            ],
+            'moderate': [
+                'Schedule time with a therapist',
+                'Join a support group',
+                'Practice self-care activities',
+                'Connect with understanding peers'
+            ],
+            'support': [
+                'Try a breathing exercise',
+                'Reach out for a heartbeat connection',
+                'Practice self-compassion',
+                'Engage in gentle movement'
+            ]
+        }
+        
+        return actions.get(crisis_level, actions['support'])
+    
+    def get_professional_resources(self):
+        return [
+            {'name': 'Psychology Today Therapist Directory', 'url': 'psychologytoday.com'},
+            {'name': 'BetterHelp Online Therapy', 'url': 'betterhelp.com'},
+            {'name': 'Talkspace Therapy', 'url': 'talkspace.com'},
+            {'name': 'Open Path Collective', 'url': 'openpathcollective.org'}
+        ]
+    
+    def get_peer_support_options(self):
+        return [
+            {'type': 'Heartbeat Connection', 'description': 'Connect with a trained peer supporter'},
+            {'type': 'Support Circle', 'description': 'Join a small group for shared healing'},
+            {'type': 'Crisis Companion', 'description': 'Get matched with someone who understands'}
+        ]
+    
+    def create_follow_up_plan(self, crisis_level):
+        plans = {
+            'urgent': 'Immediate follow-up within 24 hours',
+            'high': 'Follow-up within 48 hours',
+            'moderate': 'Weekly check-ins for one month',
+            'support': 'Optional monthly wellness check-ins'
+        }
+        
+        return plans.get(crisis_level, 'Wellness monitoring')
+    
+    def load_crisis_resources(self):
+        # Would load from database in production
+        return {}
+    
+    def load_safety_protocols(self):
+        # Would load safety protocols
+        return {}
+# core/proof_of_spark.py
+import hashlib
+import time
+import json
+from datetime import datetime
+
+class ProofOfSpark:
+    def __init__(self):
+        self.validated_sparks = set()
+        self.fate_credits_issued = 0
+    
+    def generate_spark_id(self, user_ids, connection_type, timestamp):
+        """Generate unique Spark ID for a connection"""
+        sorted_users = tuple(sorted(user_ids))
+        unique_string = f"{sorted_users}:{connection_type}:{timestamp}"
+        
+        spark_id = hashlib.sha256(unique_string.encode()).hexdigest()
+        return f"spark_{spark_id[:16]}"
+    
+    def validate_spark(self, user_a_id, user_b_id, spark_id, evidence_data):
+        """Validate a Proof-of-Spark connection"""
+        if spark_id in self.validated_sparks:
+            return {'status': 'already_validated', 'message': 'Spark already confirmed'}
+        
+        # Validate the connection evidence
+        is_valid = self.validate_connection_evidence(evidence_data)
+        
+        if is_valid:
+            self.validated_sparks.add(spark_id)
+            fate_credits = self.issue_fate_credits([user_a_id, user_b_id], spark_id)
+            
+            return {
+                'status': 'success',
+                'message': 'Spark validated! Connection confirmed.',
+                'fate_credits': fate_credits,
+                'validation_timestamp': datetime.now().isoformat()
+            }
+        else:
+            return {'status': 'failed', 'message': 'Unable to validate connection'}
+    
+    def validate_connection_evidence(self, evidence_data):
+        """Validate connection evidence"""
+        # In production, this would use secure verification
+        # For demo, we'll simulate validation
+        required_evidence = ['connection_duration', 'interaction_quality', 'mutual_consent']
+        
+        if all(evidence in evidence_data for evidence in required_evidence):
+            return evidence_data.get('interaction_quality', 0) > 0.5
+        return False
+    
+    def issue_fate_credits(self, user_ids, spark_id):
+        """Issue Fate Credit tokens"""
+        fate_credits = []
+        
+        for user_id in user_ids:
+            credit = {
+                'token_id': f"fc_{int(time.time())}_{user_id}",
+                'user_id': user_id,
+                'spark_id': spark_id,
+                'type': 'CONNECTION_VERIFIED',
+                'value': 1,
+                'timestamp': datetime.now().isoformat(),
+                'metadata': {
+                    'connection_quality': 'authentic',
+                    'impact_level': 'meaningful'
+                }
+            }
+            fate_credits.append(credit)
+            self.fate_credits_issued += 1
+        
+        return fate_credits
+    
+    def get_spark_stats(self):
+        """Get Spark system statistics"""
+        return {
+            'total_sparks': len(self.validated_sparks),
+            'fate_credits_issued': self.fate_credits_issued,
+            'system_health': 'optimal'
+        }<!-- templates/soul_activation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soul Activation - Heartbeat Sync</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magic.css') }}">
+</head>
+<body>
+    <div class="activation-container">
+        <div class="sacred-space">
+            <div class="activation-header">
+                <h1 class="magic-title">Soul Activation Ceremony</h1>
+                <p class="magic-subtitle">Your journey of connection begins with awakening your unique magic</p>
+            </div>
+            
+            <div class="activation-steps">
+                {% for ritual in activation_data.guided_rituals %}
+                <div class="ritual-step">
+                    <div class="ritual-emoji">✨</div>
+                    <div class="ritual-content">
+                        <h3>{{ ritual.title }}</h3>
+                        <p>{{ ritual.description }}</p>
+                        <div class="ritual-meta">
+                            <span class="duration">{{ ritual.duration_minutes }} minutes</span>
+                            <button class="start-ritual" data-audio="{{ ritual.audio_guide }}">
+                                Begin Ritual
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="soul-gifts">
+                <h3>Your Soul Gifts</h3>
+                <div class="gifts-grid">
+                    {% for gift in activation_data.soul_gifts %}
+                    <div class="soul-gift">
+                        <div class="gift-emoji">{{ gift.symbol }}</div>
+                        <div class="gift-info">
+                            <strong>{{ gift.name }}</strong>
+                            <p>{{ gift.meaning }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <div class="activation-completion">
+                <button id="completeActivation" class="sacred-button large">
+                    Complete Soul Activation
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('completeActivation').addEventListener('click', async function() {
+            const button = this;
+            button.textContent = 'Activating Your Magic...';
+            button.disabled = true;
+            
+            try {
+                const response = await fetch('/api/complete-activation', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        activation_insights: [] // Would collect from rituals
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.status === 'success') {
+                    // Show magical completion
+                    showMagicCompletion(data);
+                }
+            } catch (error) {
+                console.error('Activation failed:', error);
+                button.textContent = 'Try Again';
+                button.disabled = false;
+            }
+        });
+        
+        function showMagicCompletion(data) {
+            const completionHTML = `
+                <div class="magic-completion">
+                    <div class="completion-emoji">🌟</div>
+                    <h2>Welcome, ${data.soul_name}!</h2>
+                    <p>Your magic signature: <strong>${data.magic_signature}</strong></p>
+                    <p>${data.message}</p>
+                    <button onclick="window.location.href='/first-heartbeat'" class="sacred-button">
+                        Discover Your First Heartbeat
+                    </button>
+                </div>
+            `;
+            
+            document.querySelector('.sacred-space').innerHTML = completionHTML;
+        }
+        
+        // Ritual audio players
+        document.querySelectorAll('.start-ritual').forEach(button => {
+            button.addEventListener('click', function() {
+                const audioFile = this.dataset.audio;
+                playRitualAudio(audioFile);
+            });
+        });
+        
+        function playRitualAudio(audioFile) {
+            // Audio playback implementation
+            console.log('Playing ritual audio:', audioFile);
+        }
+    </script>
+</body>
+</html>
+<!-- templates/first_heartbeat.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Heartbeat - Heartbeat Sync</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magic.css') }}">
+</head>
+<body>
+    <div class="heartbeat-container">
+        <div class="magical-encounter">
+            <div class="encounter-header">
+                <h1 class="magic-title">Your First Heartbeat Awaits</h1>
+                <p class="magic-subtitle">A magical connection is ready to blossom</p>
+            </div>
+            
+            <div class="soul-reveal">
+                <div class="soul-card">
+                    <div class="soul-avatar">💖</div>
+                    <div class="soul-info">
+                        <h2>{{ match_data.soul_name }}</h2>
+                        <p class="magic-signature">{{ match_data.magic_signature }}</p>
+                        <div class="connection-magic">
+                            <span class="magic-badge">{{ match_data.magic_type }}</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="connection-story">
+                    <h3>The Story of Your Connection</h3>
+                    <p>{{ match_data.connection_story }}</p>
+                </div>
+                
+                <div class="magic-description">
+                    <p>{{ match_data.magic_description }}</p>
+                </div>
+                
+                <div class="encounter-details">
+                    <div class="detail-item">
+                        <strong>Suggested Ritual:</strong>
+                        <span>{{ match_data.suggested_ritual }}</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Meeting Duration:</strong>
+                        <span>{{ match_data.meeting_duration }}</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Spark Potential:</strong>
+                        <span class
+<!-- templates/first_heartbeat.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Heartbeat - Heartbeat Sync</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magic.css') }}">
+</head>
+<body>
+    <div class="heartbeat-container">
+        <div class="magical-encounter">
+            <div class="encounter-header">
+                <h1 class="magic-title">Your First Heartbeat Awaits</h1>
+                <p class="magic-subtitle">A magical connection is ready to blossom</p>
+            </div>
+            
+            <div class="soul-reveal">
+                <div class="soul-card">
+                    <div class="soul-avatar">💖</div>
+                    <div class="soul-info">
+                        <h2>{{ match_data.soul_name }}</h2>
+                        <p class="magic-signature">{{ match_data.magic_signature }}</p>
+                        <div class="connection-magic">
+                            <span class="magic-badge">{{ match_data.magic_type }}</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="connection-story">
+                    <h3>The Story of Your Connection</h3>
+                    <p>{{ match_data.connection_story }}</p>
+                </div>
+                
+                <div class="magic-description">
+                    <p>{{ match_data.magic_description }}</p>
+                </div>
+                
+                <div class="encounter-details">
+                    <div class="detail-item">
+                        <strong>Suggested Ritual:</strong>
+                        <span>{{ match_data.suggested_ritual }}</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Meeting Duration:</strong>
+                        <span>{{ match_data.meeting_duration }}</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Spark Potential:</strong>
+                        <span class="spark-level {{ match_data.spark_potential|lower }}">{{ match_data.spark_potential }}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="encounter-actions">
+                <button class="sacred-button accept-heartbeat">
+                    💞 Accept This Heartbeat Connection
+                </button>
+                <button class="secondary-button">
+                    🔮 Request Different Connection
+                </button>
+            </div>
+            
+            <div class="preparation-guide">
+                <h4>Preparing for Your Magical Meeting</h4>
+                <ul>
+                    <li>Find a quiet, comfortable space</li>
+                    <li>Take three deep breaths to center yourself</li>
+                    <li>Set an intention for this connection</li>
+                    <li>Bring your authentic, beautiful self</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.accept-heartbeat').addEventListener('click', function() {
+            const button = this;
+            button.textContent = 'Creating Magical Space...';
+            button.disabled = true;
+            
+            // Simulate connection setup
+            setTimeout(() => {
+                showConnectionInterface();
+            }, 2000);
+        });
+        
+        function showConnectionInterface() {
+            const connectionHTML = `
+                <div class="connection-interface">
+                    <div class="connection-header">
+                        <h2>Heartbeat Connection Active</h2>
+                        <div class="connection-timer">15:00</div>
+                    </div>
+                    
+                    <div class="connection-guidance">
+                        <h4>Guided Connection Ritual</h4>
+                        <div class="ritual-steps">
+                            <div class="step active">
+                                <span class="step-number">1</span>
+                                <span class="step-text">Share one thing you're grateful for today</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <span class="step-text">Exchange a recent moment of wonder</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <span class="step-text">Offer a heart blessing to each other</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="connection-actions">
+                        <button class="sacred-button" onclick="completeConnection()">
+                            Complete Connection
+                        </button>
+                        <button class="secondary-button" onclick="extendConnection()">
+                            Extend Time
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.querySelector('.magical-encounter').innerHTML = connectionHTML;
+            startConnectionTimer();
+        }
+        
+        function startConnectionTimer() {
+            // Timer implementation
+            console.log('Starting 15-minute connection timer');
+        }
+        
+        function completeConnection() {
+            // Handle connection completion
+            showCompletionCelebration();
+        }
+        
+        function showCompletionCelebration() {
+            const celebrationHTML = `
+                <div class="completion-celebration">
+                    <div class="celebration-emoji">🎉</div>
+                    <h2>Heartbeat Connection Complete!</h2>
+                    <p>You've shared a beautiful moment of human connection</p>
+                    <div class="spark-earned">
+                        <strong>Spark Earned:</strong>
+                        <span class="spark-badge">Soul Resonance</span>
+                    </div>
+                    <div class="next-steps">
+                        <button onclick="window.location.href='/soul-garden'" class="sacred-button">
+                            Visit Your Soul Garden
+                        </button>
+                        <button onclick="window.location.href='/daily-magic'" class="secondary-button">
+                            Discover Daily Magic
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.querySelector('.magical-encounter').innerHTML = celebrationHTML;
+        }
+    </script>
+</body>
+</html>
+<!-- templates/soul_garden.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Soul Garden - Heartbeat Sync</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magic.css') }}">
+</head>
+<body>
+    <div class="garden-container">
+        <div class="garden-space">
+            <div class="garden-header">
+                <h1 class="magic-title">Your Soul Garden</h1>
+                <p class="garden-theme">Theme: {{ garden_data.garden_theme }}</p>
+            </div>
+            
+            <div class="garden-visualization">
+                <div class="garden-plants">
+                    {% for plant in garden_data.growing_plants %}
+                    <div class="plant-item">
+                        <div class="plant-emoji">🌱</div>
+                        <div class="plant-info">
+                            <strong>{{ plant.name }}</strong>
+                            <div class="growth-bar">
+                                <div class="growth-fill" style="width: {{ plant.growth }}%; background: {{ plant.color }};"></div>
+                            </div>
+                            <span class="growth-percent">{{ plant.growth }}%</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <div class="garden-weather">
+                <h3>Garden Weather</h3>
+                <p class="weather-report">{{ garden_data.weather }}</p>
+            </div>
+            
+            <div class="garden-visitors">
+                <h3>Recent Visitors</h3>
+                <div class="visitors-list">
+                    {% for visitor in garden_data.garden_visitors %}
+                    <div class="visitor-item">
+                        <div class="visitor-avatar">💖</div>
+                        <div class="visitor-info">
+                            <strong>{{ visitor.soul_name }}</strong>
+                            <p>Visited {{ visitor.visit_time }}</p>
+                            <small>Left: {{ visitor.gift_left }}</small>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <div class="garden-magic">
+                <h3>Recent Magic</h3>
+                <div class="magic-list">
+                    {% for magic in garden_data.recent_magic %}
+                    <div class="magic-item">
+                        <span class="magic-emoji">✨</span>
+                        <span>{{ magic }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <div class="garden-actions">
+                <button onclick="window.location.href='/daily-magic'" class="sacred-button">
+                    Discover Today's Magic
+                </button>
+                <button onclick="window.location.href='/first-heartbeat'" class="secondary-button">
+                    Find New Connections
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+/* static/css/magic.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: white;
+}
+
+/* Portal Styles */
+.portal-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+}
+
+/* Ceremony Styles */
+.ceremony-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sacred-space {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+}
+
+.magic-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.magic-subtitle {
+    opacity: 0.8;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Intention Cards */
+.intention-cards {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.intention-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.intention-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.intention-card.selected {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.sacred-button {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.sacred-button.active, .sacred-button:not(:disabled) {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.sacred-button:hover:not(:disabled) {
+    transform: scale(1.02);
+}
+
+.sacred-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.sacred-button.large {
+    padding: 20px 50px;
+    font-size: 18px;
+}
+
+.secondary-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Activation Styles */
+.activation-container {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.activation-steps {
+    display: grid;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.ritual-step {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    text-align: left;
+}
+
+.ritual-emoji {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.ritual-content h3 {
+    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif;
+}
+
+.ritual-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.duration {
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+/* Soul Gifts */
+.soul-gifts {
+    margin: 30px 0;
+    text-align: left;
+}
+
+.gifts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.soul-gift {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gift-emoji {
+    font-size: 20px;
+}
+
+/* Heartbeat Styles */
+.heartbeat-container {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.magical-encounter {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.soul-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.soul-avatar {
+    font-size: 48px;
+    flex-shrink: 0;
+}
+
+.soul-info h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 5px;
+}
+
+.magic-signature {
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.magic-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+/* Connection Story */
+.connection-story, .magic-description {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.connection-story h3, .magic-description h3 {
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Encounter Details */
+.encounter-details {
+    display: grid;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.spark-level {
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.spark-level.high {
+    background: rgba(76, 175, 80, 0.3);
+    color: #4CAF50;
+}
+
+.spark-level.medium {
+    background: rgba(255, 193, 7, 0.3);
+    color: #FFC107;
+}
+
+/* Encounter Actions */
+.encounter-actions {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Preparation Guide */
+.preparation-guide {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.preparation-guide h4 {
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.preparation-guide ul {
+    list-style: none;
+    padding: 0;
+}
+
+.preparation-guide li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.preparation-guide li:before {
+    content: '✨';
+    position: absolute;
+    left: 0;
+}
+
+/* Connection Interface */
+.connection-interface {
+    text-align: center;
+}
+
+.connection-header {
+    margin-bottom: 30px;
+}
+
+.connection-timer {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.connection-guidance {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.ritual-steps {
+    display: grid;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.step.active {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.step-number {
+    background: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Completion Celebration */
+.completion-celebration, .magic-completion {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.celebration-emoji {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.spark-earned {
+    margin: 20px 0;
+}
+
+.spark-badge {
+    background: linear-gradient(135deg, #FFD93D 0%, #FF6B6B 100%);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.next-steps {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Garden Styles */
+.garden-container {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.garden-space {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.garden-theme {
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.garden-plants {
+    display: grid;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.plant-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.plant-emoji {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.growth-bar {
+    background: rgba(255, 255, 255, 0.2);
+    height: 8px;
+    border-radius: 4px;
+    margin: 8px 0;
+    overflow: hidden;
+}
+
+.growth-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.growth-percent {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* Garden Sections */
+.garden-weather, .garden-visitors, .garden-magic {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.weather-report {
+    font-style: italic;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+.visitors-list, .magic-list {
+    margin-top: 15px;
+}
+
+.visitor-item, .magic-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.visitor-item:last-child, .magic-item:last-child {
+    border-bottom: none;
+}
+
+.visitor-avatar, .magic-emoji {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.visitor-info small {
+    opacity: 0.7;
+}
+
+.garden-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.05); opacity: 1; }
+}
+
+@keyframes breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@keyframes floatUp {
+    0% { 
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { 
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes rippleExpand {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(4); opacity: 0; }
+}
+
+@keyframes weaveGlow {
+    0% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 0; transform: scale(1.2); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sacred-space {
+        margin: 20px;
+        padding: 30px 20px;
+    }
+    
+    .magic-title {
+        font-size: 24px;
+    }
+    
+    .soul-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .encounter-actions, .next-steps, .garden-actions {
+        flex-direction: column;
+    }
+    
+    .gifts-grid {
+        grid-template-columns: 1fr;
+    }
+}# requirements.txt
+flask==2.3.3
+python-dotenv==1.0.0
+flask-cors==4.0.0
+pandas==2.0.3
+numpy==1.24.3
+gunicorn==21.2.0
+# .env.example
+SECRET_KEY=your_magical_secret_key_here
+DEBUG=True
+PORT=5000
+# .env.example
+SECRET_KEY=your_magical_secret_key_here
+DEBUG=True
+PORT=5000
+#!/bin/bash
+# launch_heartbeat.sh
+
+echo "🌟 Launching Heartbeat Sync Universe..."
+
+# Check if virtual environment exists
+if [ ! -d "venv" ]; then
+    echo "Creating virtual environment..."
+    python3 -m venv venv
+fi
+
+# Activate virtual environment
+source venv/bin/activate
+
+# Install dependencies
+echo "Installing magical dependencies..."
+pip install -r requirements.txt
+
+# Create necessary directories
+mkdir -p static/audio static/images
+
+echo "🎵 Note: Add ambient audio files to static/audio/ for full experience"
+echo "🖼️  Note: Add magical images to static/images/ for visual enchantment"
+
+# Launch the application
+echo "🚀 Starting Heartbeat Sync Soul Portal..."
+python core/app.py
+# Clone or create the project structure above
+cd heartbeat-sync
+
+# Make launch script executable
+chmod +x launch_heartbeat.sh
+
+# Launch the entire system
+./launch_heartbeat.sh
