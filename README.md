@@ -640,7 +640,11 @@ An open-source, privacy-first protocol that facilitates real human connections t
 
 ```bash
 # Clone repository
+# ✅ CORRECT - requirements.txt is in core/ folder
 git clone https://github.com/LHMisme420/heartbeat-sync.git
+cd heartbeat-sync/core
+pip install -r requirements.txt
+python app.py
 cd heartbeat-sync
 
 # Install dependencies
