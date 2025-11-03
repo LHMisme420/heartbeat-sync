@@ -7327,3 +7327,47 @@ source venv/bin/activate
 pip install -r core/requirements.txt
 pip install gunicorn
 gunicorn --bind 0.0.0.0:5000 core.app:app
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Copy requirements first for better caching
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy entire project
+COPY . .
+
+# Install from core/requirements too
+RUN pip install --no-cache-dir -r core/requirements.txt
+
+EXPOSE 8080
+
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "core.app:app"]
+flask==2.3.3
+gunicorn==21.2.0
+python-dotenv==1.0.0
+flask-cors==4.0.0
+pandas==2.0.3
+numpy==1.24.3
+name: Deploy to DigitalOcean
+on:
+  push:
+    branches: [ main ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+name: heartbeat-sync
+services:
+- name: web
+  source_dir: /
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: LHMisme420/heartbeat-sync
+  run_command: gunicorn --bind 0.0.0.0:$PORT core.app:app
+  environment_slug: python
+  instance_count: 1
+  instance_size_slug: basic-xxs
