@@ -7302,3 +7302,28 @@ services:
   environment_slug: python
   instance_count: 1
   instance_size_slug: basic-xxs
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 8080
+
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "core.app:app"]
+cp core/requirements.txt ./
+# Change this at the top of core/app.py
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+# On a fresh Ubuntu Droplet
+git clone https://github.com/LHMisme420/heartbeat-sync.git
+cd heartbeat-sync
+python3 -m venv venv
+source venv/bin/activate
+pip install -r core/requirements.txt
+pip install gunicorn
+gunicorn --bind 0.0.0.0:5000 core.app:app
