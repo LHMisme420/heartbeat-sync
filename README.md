@@ -593,3 +593,399 @@ else:
         if validation_result['status'] == 'SUCCESS':
             print("\n  ** SUCCESS! Fate Credits Issued: **")
             print(json.dumps(validation_result['user_a_credit'], indent=4))
+heartbeat-sync/
+├── 📄 README.md
+├── 📄 LICENSE (AGPL v3)
+├── 📁 docs/
+│   ├── 📄 CONTRIBUTING.md
+│   ├── 📄 GOVERNANCE.md
+│   ├── 📄 ETHICS_CHARTER.md
+│   └── 📄 DEPLOYMENT.md
+├── 📁 core/
+│   ├── 📄 app.py
+│   ├── 📄 proof_of_spark.py
+│   ├── 📄 requirements.txt
+│   └── 📄 .env.example
+├── 📁 contracts/
+│   ├── 📄 FateCredit.sol
+│   ├── 📄 deploy.js
+│   └── 📄 package.json
+├── 📁 web-sdk/
+│   ├── 📄 heartbeat-sdk.js
+│   └── 📄 examples/
+├── 📁 mobile/
+│   └── 📄 README.md (React Native setup)
+├── 📁 ngo-integrations/
+│   ├── 📄 crisis_resources.json
+│   └── 📄 safety_protocols.md
+└── 📁 community/
+    ├── 📄 ROADMAP.md
+    └── 📄 AMBASSADOR_PROGRAM.md
+    # ❤️ Heartbeat-Sync: Protocol for Human Connection
+
+> Fighting the loneliness epidemic through anonymous, serendipitous connections
+
+[![AGPL v3 License](https://img.shields.io/badge/license-AGPL_v3-blue.svg)](LICENSE)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+
+## 🌟 What is Heartbeat-Sync?
+
+An open-source, privacy-first protocol that facilitates real human connections through:
+- **Mood/Location Matching** - AI-powered vibe-based pairing
+- **Proof-of-Spark** - Cryptographic validation of real meetings
+- **Fate Credits** - Soulbound reputation tokens
+- **Zero-Knowledge Privacy** - Connect without surveillance
+
+## 🚀 Quick Start
+
+```bash
+# Clone repository
+git clone https://github.com/heartbeat-sync/core.git
+cd heartbeat-sync
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run locally
+python app.py
+
+### 2. **core/app.py**
+```python
+"""
+Heartbeat-Sync Core Server
+Open-source protocol for human connection
+"""
+
+from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
+import pandas as pd
+import os
+from dotenv import load_dotenv
+from proof_of_spark import generate_spark_id, validate_proof_of_spark
+import logging
+
+# Configuration
+load_dotenv()
+app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# In-memory storage (replace with PostgreSQL in production)
+users_df = pd.DataFrame(columns=['id', 'location', 'mood', 'interests', 'anonymous_id'])
+
+@app.route('/')
+def home():
+    """Main application endpoint"""
+    return render_template('index.html')
+
+@app.route('/api/health')
+def health_check():
+    """Health check endpoint for monitoring"""
+    return jsonify({
+        'status': 'healthy', 
+        'version': '1.0.0',
+        'service': 'heartbeat-sync-core'
+    })
+
+@app.route('/api/vibe', methods=['POST'])
+def submit_vibe():
+    """
+    Submit a vibe for matching
+    Expects JSON: {location, mood, interests, anonymous_id}
+    """
+    try:
+        data = request.get_json()
+        
+        # Input validation
+        required_fields = ['location', 'mood', 'interests', 'anonymous_id']
+        for field in required_fields:
+            if field not in data:
+                return jsonify({'error': f'Missing field: {field}'}), 400
+        
+        # Add to dataframe
+        global users_df
+        new_user = {
+            'id': len(users_df) + 1,
+            'location': data['location'],
+            'mood': float(data['mood']),
+            'interests': data['interests'],
+            'anonymous_id': data['anonymous_id']
+        }
+        
+        users_df = pd.concat([users_df, pd.DataFrame([new_user])], ignore_index=True)
+        
+        logger.info(f"New vibe submitted: {data['anonymous_id'][:8]}...")
+        
+        return jsonify({
+            'status': 'success',
+            'user_id': new_user['id'],
+            'message': 'Vibe submitted successfully'
+        })
+        
+    except Exception as e:
+        logger.error(f"Error submitting vibe: {str(e)}")
+        return jsonify({'error': 'Internal server error'}), 500
+
+@app.route('/api/matches', methods=['GET'])
+def get_matches():
+    """
+    Get matches for all users (anonymous)
+    """
+    try:
+        matches = match_heartbeats(users_df)
+        
+        # Generate Spark IDs for potential connections
+        for match in matches:
+            spark_id = generate_spark_id(
+                match['pair'], 
+                match['shared_interest'],
+                match.get('location', 'unknown'),
+                int(pd.Timestamp.now().timestamp())
+            )
+            match['spark_id'] = spark_id
+        
+        return jsonify({
+            'matches': matches,
+            'total_users': len(users_df),
+            'total_matches': len(matches)
+        })
+        
+    except Exception as e:
+        logger.error(f"Error getting matches: {str(e)}")
+        return jsonify({'error': 'Internal server error'}), 500
+
+def match_heartbeats(df, max_mood_diff=2):
+    """
+    Core matching algorithm
+    """
+    if len(df) < 2:
+        return []
+        
+    matches = []
+    
+    for i in range(len(df)):
+        for j in range(i + 1, len(df)):
+            # Same location check
+            if df.loc[i, 'location'] != df.loc[j, 'location']:
+                continue
+                
+            # Mood compatibility
+            mood_diff = abs(df.loc[i, 'mood'] - df.loc[j, 'mood'])
+            if mood_diff > max_mood_diff:
+                continue
+                
+            # Shared interests
+            interests_i = set(df.loc[i, 'interests'])
+            interests_j = set(df.loc[j, 'interests'])
+            shared = interests_i & interests_j
+            
+            if shared:
+                shared_interest = list(shared)[0]
+                mood_avg = (df.loc[i, 'mood'] + df.loc[j, 'mood']) / 2
+                
+                match = {
+                    'pair': (int(df.loc[i, 'id']), int(df.loc[j, 'id'])),
+                    'anonymous_pair': (
+                        df.loc[i, 'anonymous_id'][:8] + '...',
+                        df.loc[j, 'anonymous_id'][:8] + '...'
+                    ),
+                    'shared_interest': shared_interest,
+                    'mood_avg': round(mood_avg, 1),
+                    'location': df.loc[i, 'location'],
+                    'nudge_idea': f"Meet for {shared_interest} - mood match: {round(mood_avg, 1)}/10"
+                }
+                matches.append(match)
+                
+    return matches
+
+@app.route('/api/validate-spark', methods=['POST'])
+def validate_spark():
+    """
+    Validate a Proof-of-Spark after meeting
+    """
+    try:
+        data = request.get_json()
+        
+        validation_result = validate_proof_of_spark(
+            data['user_a_id'],
+            data['user_b_id'], 
+            data['spark_id'],
+            data.get('location', 'unknown')
+        )
+        
+        return jsonify(validation_result)
+        
+    except Exception as e:
+        logger.error(f"Error validating spark: {str(e)}")
+        return jsonify({'error': 'Validation failed'}), 500
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    debug = os.environ.get('DEBUG', 'False').lower() == 'true'
+    
+    app.run(
+        host='0.0.0.0', 
+        port=port, 
+        debug=debug,
+        threaded=True
+    )
+"""
+Proof-of-Spark Validation System
+Zero-knowledge inspired meeting verification
+"""
+
+import hashlib
+import time
+import json
+from datetime import datetime
+import logging
+
+logger = logging.getLogger(__name__)
+
+class ProofOfSpark:
+    """Core Proof-of-Spark validation engine"""
+    
+    def __init__(self):
+        self.validated_sparks = set()
+        self.fate_credits_issued = 0
+    
+    def generate_spark_id(self, pair_ids, shared_interest, location, timestamp):
+        """
+        Generate deterministic Spark ID for a potential connection
+        """
+        # Sort for consistency
+        sorted_pair = tuple(sorted(pair_ids))
+        
+        # Create unique string
+        unique_string = f"{sorted_pair}:{shared_interest}:{location}:{timestamp}"
+        
+        # Generate hash-based ID
+        spark_id = hashlib.sha256(unique_string.encode()).hexdigest()
+        
+        logger.info(f"Generated Spark ID: {spark_id[:16]}...")
+        return spark_id
+    
+    def issue_fate_credit(self, user_id, spark_id):
+        """
+        Issue a Fate Credit (Soulbound Token)
+        In production, this would mint an actual SBT
+        """
+        fate_credit = {
+            'token_id': f"FC-{int(time.time())}-{user_id}",
+            'user_id': user_id,
+            'spark_id': spark_id,
+            'timestamp': int(time.time()),
+            'type': 'CONNECTION_VERIFIED',
+            'metadata': {
+                'version': '1.0',
+                'network': 'heartbeat-sync'
+            }
+        }
+        
+        self.fate_credits_issued += 1
+        logger.info(f"Issued Fate Credit to user {user_id}")
+        return fate_credit
+    
+    def validate_proof_of_spark(self, user_a_id, user_b_id, spark_id, location_data):
+        """
+        Validate that two users actually met
+        """
+        logger.info(f"Validating Spark: {spark_id[:16]}...")
+        
+        # Prevent double-spending
+        if spark_id in self.validated_sparks:
+            return {
+                'status': 'ERROR',
+                'message': 'Spark already validated'
+            }
+        
+        # Simulate proximity verification
+        # In production, this would use secure multi-party computation
+        proximity_verified = self._verify_proximity(location_data)
+        
+        if proximity_verified and spark_id.startswith('0x'):
+            # Success - issue Fate Credits
+            credit_a = self.issue_fate_credit(user_a_id, spark_id)
+            credit_b = self.issue_fate_credit(user_b_id, spark_id)
+            
+            self.validated_sparks.add(spark_id)
+            
+            return {
+                'status': 'SUCCESS',
+                'spark_id': spark_id,
+                'fate_credits_issued': 2,
+                'user_a_credit': credit_a,
+                'user_b_credit': credit_b,
+                'validated_at': datetime.utcnow().isoformat()
+            }
+        else:
+            return {
+                'status': 'FAILED',
+                'message': 'Proximity verification failed'
+            }
+    
+    def _verify_proximity(self, location_data):
+        """
+        Simulate secure proximity verification
+        In production: Use GPS + Bluetooth LE + WiFi fingerprinting
+        with zero-knowledge proofs
+        """
+        # Mock implementation - always returns True in demo
+        # Real implementation would use secure multi-party computation
+        return True
+    
+    def get_stats(self):
+        """Get system statistics"""
+        return {
+            'validated_sparks': len(self.validated_sparks),
+            'fate_credits_issued': self.fate_credits_issued,
+            'system_health': 'OPERATIONAL'
+        }
+
+# Global instance
+spark_engine = ProofOfSpark()
+
+# Module functions for backward compatibility
+def generate_spark_id(pair_ids, shared_interest, location, timestamp):
+    return spark_engine.generate_spark_id(pair_ids, shared_interest, location, timestamp)
+
+def validate_proof_of_spark(user_a_id, user_b_id, spark_id, location_data):
+    return spark_engine.validate_proof_of_spark(user_a_id, user_b_id, spark_id, location_data)
+flask==2.3.3
+pandas==2.0.3
+python-dotenv==1.0.0
+flask-cors==4.0.0
+transformers==4.30.2
+torch==2.0.1
+web3==6.5.0
+cryptography==41.0.3
+gunicorn==21.2.0
+# Heartbeat-Sync Ethics Charter
+
+## Our Principles
+
+### 1. Privacy First
+- No personal data collection
+- Anonymous by design
+- Zero-knowledge verification only
+
+### 2. User Sovereignty  
+- Users control their data
+- Opt-in everything
+- Right to be forgotten
+
+### 3. Anti-Surveillance
+- No location tracking
+- No social graph building
+- No behavior profiling
+
+### 4. Mental Health Positive
+- Designed to reduce loneliness
+- Crisis resources integrated
+- Professional oversight
+
+## Enforcement
+Violations of this charter result in immediate removal from the project.
