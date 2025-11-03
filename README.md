@@ -6302,3 +6302,117 @@ class PerformanceMonitor:
                 }
         
         return anomalies
+# core/crisis_protocols.py (Snippet - Focus on core logic)
+
+import random
+import time
+import json
+import logging
+
+logger = logging.getLogger(__name__)
+
+class CrisisGuardian:
+    def __init__(self, users_db):
+        # Access to the deep profile data (Vulnerability Courage, Joy Amplification, etc.)
+        self.users_db = users_db
+        self.CRISIS_HOTLINES = self.load_hotlines()
+
+    def assess_and_respond(self, user_id, user_input_data):
+        """
+        Main function to assess crisis level based on multiple data sources.
+        """
+        user_data = self.users_db.get(user_id, {})
+        
+        # --- SCORING VECTORS ---
+        risk_score_text = self._score_textual_signals(user_input_data.get('message', ''))
+        risk_score_behavior = self._score_behavioral_signals(user_data, user_input_data.get('recent_activity', {}))
+        risk_score_qualitative = self._score_qualitative_signals(user_data)
+        
+        # --- CONTEXTUAL RISK SCORE (Weighted Sum) ---
+        CONTEXTUAL_RISK_SCORE = (
+            (risk_score_text * 0.5) +          # Immediate urgency (50% weight)
+            (risk_score_behavior * 0.3) +      # Isolation/Drop in activity (30% weight)
+            (risk_score_qualitative * 0.2)     # Fragile baseline profile (20% weight)
+        )
+
+        crisis_level = self._determine_level(CONTEXTUAL_RISK_SCORE)
+        
+        logger.warning(f"CRISIS ALERT for User {user_id[:4]}... Level: {crisis_level}, Score: {CONTEXTUAL_RISK_SCORE:.2f}")
+
+        return self._execute_protocol(user_id, crisis_level)
+
+    # --- SCORING IMPLEMENTATIONS (0.0 to 1.0 scale) ---
+
+    def _score_textual_signals(self, text):
+        """Analyze new text input for immediate crisis markers."""
+        text = text.lower()
+        if any(w in text for w in ['kill myself', 'end it all', 'goodbye', 'no hope left']):
+            return 1.0  # CRITICAL URGENCY
+        if any(w in text for w in ['can\'t go on', 'hopeless', 'overwhelmed', 'severe pain']):
+            return 0.7  # HIGH DISTRESS
+        return 0.0
+
+    def _score_behavioral_signals(self, user_data, activity_data):
+        """Analyze patterns: sudden isolation or sharp mood drop."""
+        metrics = user_data.get('growth_metrics', {})
+        
+        # Isolation: User with history of connection hasn't connected in 48h (Simulated)
+        isolation_score = 0.0
+        if activity_data.get('heartbeats_shared_24h', 0) == 0 and metrics.get('heartbeats_shared', 1) > 5:
+            isolation_score += 0.4
+            
+        # Vibe Drop: User's mood is significantly lower than their recent average (Simulated)
+        mood_drop_score = 0.0
+        if activity_data.get('current_mood', 5) < 3 and user_data.get('average_mood', 7) > 6:
+            mood_drop_score += 0.3
+            
+        return min(1.0, isolation_score + mood_drop_score)
+
+    def _score_qualitative_signals(self, user_data):
+        """Analyze baseline profile vulnerability (from Soul Activation/Neural Bridge)."""
+        metrics = user_data.get('growth_metrics', {})
+        
+        # Fragile Baseline: High vulnerability coupled with low protective factors (Joy, Connection)
+        vulnerability = metrics.get('vulnerability_courage', 0.5)
+        joy = metrics.get('joy_amplification', 0.5)
+        
+        # Risk is high if high exposure (vulnerability) but low protection (joy/connection)
+        if vulnerability > 0.7 and joy < 0.3:
+            return 0.6
+        
+        return 0.0
+
+    # --- PROTOCOL EXECUTION ---
+
+    def _determine_level(self, score):
+        """Map the contextual score to a clinical intervention level."""
+        if score >= 0.8:
+            return 'CRITICAL'
+        if score >= 0.5:
+            return 'HIGH'
+        if score >= 0.3:
+            return 'MODERATE'
+        return 'LOW'
+
+    def _execute_protocol(self, user_id, crisis_level):
+        """Execute the appropriate safety and referral protocol."""
+        
+        if crisis_level == 'CRITICAL':
+            return {
+                'level': 'CRITICAL',
+                'title': "⚠️ IMMEDIATE SAFETY ALERT ⚠️",
+                'message': "Your Heartbeat Guardian has detected an urgent signal. You are not alone. Please use the resources below IMMEDIATELY.",
+                'actions': [
+                    {'type': 'CALL', 'name': '988 Suicide & Crisis Lifeline', 'value': '988'},
+                    {'type': 'TEXT', 'name': 'Crisis Text Line', 'value': 'Text HOME to 741741'},
+                    {'type': 'GUIDE', 'name': 'Use Your Safety Plan', 'value': 'link/to/user_safety_plan'}
+                ],
+                'internal_action': 'FLAG_FOR_HUMAN_OVERVIEW'
+            }
+        
+        # ... Other level responses for HIGH, MODERATE, LOW
+        
+        return {'level': 'LOW', 'message': "We're here for you. Try a Daily Magic ritual or connect with a Heartbeat match for support."}
+
+    def load_hotlines(self):
+        return {'US': '988'}
