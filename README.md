@@ -1,4 +1,3 @@
-
 # ❤️ Heartbeat-Sync: Protocol for Human Connection
 
 > Fighting the loneliness epidemic through anonymous, serendipitous connections
@@ -15,7 +14,7 @@ pip install -r requirements.txt
 
 # Run the application
 python app.py
-
+#
 # Mock data for users: location, mood score (0-10), interests
 users = [
     {'id': 1, 'location': 'NYC', 'mood': 4, 'interests': ['art', 'coffee']},
