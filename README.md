@@ -1747,3 +1747,307 @@ http://localhost:5000
 # Test the API directly:
 curl http://localhost:5000/api/stats
 curl http://localhost:5000/api/health
+# crisis_protocols.py
+class CrisisInterventionEngine:
+    def __init__(self):
+        self.immediate_resources = CrisisResourceManager()
+        self.safety_monitors = []  # Human team
+        self.escalation_paths = self.load_escalation_protocols()
+    
+    def assess_risk_level(self, user_data, recent_activity, text_analysis):
+        """Clinical risk assessment (never diagnostic, always precautionary)"""
+        risk_signals = {
+            'CRITICAL': [
+                'explicit_suicidal_intent',
+                'active_self_harm_behavior', 
+                'psychotic_symptoms_with_risk',
+                'recent_trauma_with_instability'
+            ],
+            'HIGH': [
+                'suicidal_ideation_no_plan',
+                'self_harm_urges',
+                'severe_depression_isolation',
+                'crisis_resource_searches'
+            ],
+            'MODERATE': [
+                'hopelessness_language',
+                'severe_anxiety_patterns',
+                'social_withdrawal_signals',
+                'help_seeking_behavior'
+            ]
+        }
+        
+        return self.calculate_risk_score(user_data, risk_signals)
+    
+    def execute_crisis_protocol(self, risk_level, user_context):
+        protocols = {
+            'CRITICAL': self.critical_risk_protocol,
+            'HIGH': self.high_risk_protocol, 
+            'MODERATE': self.moderate_risk_protocol
+        }
+        return protocols[risk_level](user_context)
+def critical_risk_protocol(self, user):
+    """For imminent danger - fastest possible response"""
+    actions = [
+        # Step 1: Immediate automated safety
+        {
+            'action': 'display_crisis_modal',
+            'content': {
+                'header': 'Immediate Support Is Available',
+                'hotlines': [
+                    ('988 Suicide & Crisis Lifeline', 'Call 988'),
+                    ('Crisis Text Line', 'Text HOME to 741741'),
+                    ('Emergency Services', 'Call 911')
+                ],
+                'show_emergency_button': True
+            }
+        },
+        
+        # Step 2: Human crisis specialist alert (within 60 seconds)
+        {
+            'action': 'alert_crisis_specialist',
+            'priority': 'IMMEDIATE',
+            'response_time': '60 seconds',
+            'specialist_actions': [
+                'Establish human connection',
+                'Assess immediate safety',
+                'Coordinate emergency services if needed',
+                'Stay connected until stable'
+            ]
+        },
+        
+        # Step 3: Warm handoff preparation
+        {
+            'action': 'prepare_warm_handoff',
+            'options': [
+                'Local crisis stabilization unit',
+                'Mobile crisis team dispatch',
+                'Emergency department coordination'
+            ]
+        }
+    ]
+    
+    # Log for follow-up and quality assurance
+    self.log_crisis_intervention(user, 'CRITICAL', actions)
+    return {'protocol_def high_risk_protocol(self, user):
+    """For serious distress without immediate danger"""
+    actions = [
+        {
+            'action': 'activate_support_circle',
+            'components': [
+                'Peer support matching (experienced helpers)',
+                'Crisis counselor connection within 30 minutes',
+                'Safety planning worksheet',
+                'Follow-up schedule: 2hr, 6hr, 24hr, 3day check-ins'
+            ]
+        },
+        {
+            'action': 'provide_immediate_tools',
+            'tools': [
+                ('Grounding Techniques', '5-4-3-2-1 sensory exercise'),
+                ('Breathing Exercise', 'Box breathing guide'),
+                ('Distress Tolerance', 'TIP skills for crisis moments')
+            ]
+        },
+        {
+            'action': 'schedule_professional_followup',
+            'options': [
+                'Next-day therapist appointment',
+                'Psychiatry consultation within 48 hours',
+                'Support group matching'
+            ]
+        }
+    ]
+    return actionsactivated': True, 'actions_taken': actions}
+# therapist_matching.py
+class ClinicalMatchEngine:
+    def __init__(self):
+        self.licensed_professionals = self.load_verified_therapists()
+        self.specialty_matcher = SpecialtyMatcher()
+        self.availability_tracker = AvailabilityManager()
+    
+    def match_therapist(self, user_needs, preferences, clinical_factors):
+        """Match users with appropriate mental health professionals"""
+        
+        match_criteria = {
+            'clinical_factors': {
+                'diagnoses': user_needs.get('diagnoses', []),
+                'symptoms': user_needs.get('symptoms', []),
+                'crisis_history': user_needs.get('crisis_history', False),
+                'treatment_preferences': user_needs.get('treatment_preferences', [])
+            },
+            'therapist_factors': {
+                'specialties': ['must_match_user_needs'],
+                'modalities': ['should_align_with_preferences'],
+                'availability': ['within_48_hours_priority'],
+                'demographics': ['optional_preference_matching']
+            },
+            'practical_factors': {
+                'insurance': ['in_network_priority'],
+                'cost': ['sliding_scale_available'],
+                'modality': ['video', 'phone', 'in_person'],
+                'cultural_competence': ['language', 'identity_matching']
+            }
+        }
+        
+        return self.find_optimal_matches(match_criteria)
+# therapist_matching.py
+class ClinicalMatchEngine:
+    def __init__(self):
+        self.licensed_professionals = self.load_verified_therapists()
+        self.specialty_matcher = SpecialtyMatcher()
+        self.availability_tracker = AvailabilityManager()
+    
+    def match_therapist(self, user_needs, preferences, clinical_factors):
+        """Match users with appropriate mental health professionals"""
+        
+        match_criteria = {
+            'clinical_factors': {
+                'diagnoses': user_needs.get('diagnoses', []),
+                'symptoms': user_needs.get('symptoms', []),
+                'crisis_history': user_needs.get('crisis_history', False),
+                'treatment_preferences': user_needs.get('treatment_preferences', [])
+            },
+            'therapist_factors': {
+                'specialties': ['must_match_user_needs'],
+                'modalities': ['should_align_with_preferences'],
+                'availability': ['within_48_hours_priority'],
+                'demographics': ['optional_preference_matching']
+            },
+            'practical_factors': {
+                'insurance': ['in_network_priority'],
+                'cost': ['sliding_scale_available'],
+                'modality': ['video', 'phone', 'in_person'],
+                'cultural_competence': ['language', 'identity_matching']
+            }
+        }
+        
+        return self.find_optimal_matches(match_criteria)
+def verify_therapist_credentials(self, therapist_data):
+    """Ensure all providers meet clinical standards"""
+    verification_checks = [
+        ('License Validation', 'Active state license verification'),
+        ('Malpractice Insurance', 'Current coverage verification'),
+        ('Background Check', 'Clean record required'),
+        ('Education Verification', 'Accredited institution confirmation'),
+        ('Specialty Certification', 'Board certification where applicable'),
+        ('Peer References', 'Professional colleague reviews'),
+        ('Client Outcomes', 'Anonymous outcome data tracking')
+    ]
+    
+    quality_metrics = [
+        'client_retention_rate',
+        'outcome_improvement_scores', 
+        'client_satisfaction_ratings',
+        'crisis_management_competency',
+        'cultural_humility_assessments'
+    ]
+    
+    return all(checks pass) and (quality_metrics meet threshold)
+# care_coordination.py
+class CareCoordinator:
+    def create_treatment_continuum(self, user, matched_therapist, support_network):
+        """Seamless integration between professional and peer support"""
+        
+        care_plan = {
+            'professional_care': {
+                'primary_therapist': matched_therapist,
+                'session_frequency': 'Weekly initially',
+                'treatment_goals': user['recovery_goals'],
+                'progress_tracking': 'PHQ-9/GAD-7 monthly'
+            },
+            'peer_support': {
+                'heartbeat_matches': support_network['peers'],
+                'support_groups': self.match_support_groups(user),
+                'community_activities': self.suggest_community_events(user)
+            },
+            'crisis_prevention': {
+                'safety_plan': self.create_safety_plan(user),
+                'emergency_contacts': user['trusted_contacts'],
+                'crisis_protocol': 'automated_escalation'
+            }
+        }
+        
+        return care_plan
+# safety_oversight.py
+class ClinicalOversightBoard:
+    def __init__(self):
+        self.licensed_supervisors = []  # LCSWs, PhDs, MDs
+        self.crisis_specialists = []    # 24/7 coverage
+        self.ethics_committee = []      # Monthly reviews
+    
+    def review_automated_decisions(self, case):
+        """Human review of all high-risk automated actions"""
+        review_required_for = [
+            'any_crisis_protocol_activation',
+            'therapist_matching_recommendations', 
+            'safety_plan_modifications',
+            'user_reports_of_concern'
+        ]
+        
+        if case['type'] in review_required_for:
+            return self.human_review_team.assess_case(case)
+# privacy_protocols.py
+class ClinicalDataGuardian:
+    def enforce_hipaa_compliance(self, user_data):
+        """Healthcare-grade privacy protection"""
+        protections = {
+            'encryption': 'End-to-end for all clinical data',
+            'access_controls': 'Role-based with audit logging',
+            'data_minimization': 'Only collect essential clinical data',
+            'user_control': 'Full data ownership and export rights',
+            'breach_protocol': 'Immediate notification and response'
+        }
+        
+        # Special handling for crisis data
+        if user_data.get('crisis_related'):
+            return self.enhanced_crisis_privacy_protocol(user_data)
+phase1_milestones = [
+    ('Week 1', 'Integrate 988 and crisis hotlines'),
+    ('Week 2', 'Build risk assessment engine'),
+    ('Week 3', 'Train first crisis response team'),
+    ('Week 4', 'Launch basic safety protocols')
+]
+phase2_milestones = [
+    ('Month 2', 'Onboard first 100 verified therapists'),
+    ('Month 2', 'Build insurance billing integration'),
+    ('Month 3', 'Launch therapist matching platform'),
+    ('Month 3', 'Establish clinical oversight board')
+]
+phase3_milestones = [
+    ('Month 4', 'Peer support specialist training'),
+    ('Month 5', 'Care coordination system'),
+    ('Month 6', 'Outcome tracking and research platform')
+]
+outcome_metrics = {
+    'safety_metrics': [
+        'crisis_interventions_activated',
+        'successful_warm_handoffs',
+        'hospitalizations_prevented',
+        'lives_positively_impacted'
+    ],
+    'clinical_improvement': [
+        'PHQ-9_score_reduction',
+        'GAD-7_score_improvement', 
+        'functioning_improvement',
+        'quality_of_life_measures'
+    ],
+    'access_metrics': [
+        'time_to_first_appointment',
+        'therapist_match_satisfaction',
+        'continuity_of_care_rate',
+        'underserved_populations_reached'
+    ]
+}
+BetterHelp/Talkspace:
+❌ Isolated clinical interactions
+❌ No crisis infrastructure  
+❌ Limited peer support integration
+❌ No community safety net
+
+Heartbeat Sync:
+✅ Clinical + community continuum
+✅ Built-in crisis prevention
+✅ Peer support as adjunct to therapy
+✅ Community as protective factor
+✅ Research-backed matching
