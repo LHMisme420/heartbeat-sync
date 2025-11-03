@@ -7290,3 +7290,15 @@ from neural_mood_bridge import neural_nudge
 def neural_endpoint():
     data = request.json.get('eeg', generate_mock_eeg())  # Real: From Neuralink API
     return jsonify(neural_nudge(data))
+name: heartbeat-sync
+services:
+- name: web
+  source_dir: /
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: LHMisme420/heartbeat-sync
+  run_command: gunicorn --bind :$PORT core.app:app
+  environment_slug: python
+  instance_count: 1
+  instance_size_slug: basic-xxs
