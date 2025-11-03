@@ -5462,3 +5462,310 @@ python core/app.py
 💞 First Heartbeat: http://localhost:5000/first-heartbeat
 🌿 Soul Garden: http://localhost:5000/soul-garden
 ✨ Daily Magic: http://localhost:5000/daily-magic
+# core/neural_bridge.py
+
+import random
+
+class NeuralBridgeEngine:
+    """
+    Simulates AI that matches users based on deep emotional and psychological resonance.
+    This replaces simple mood/interest matching with 'soul-level' factors.
+    """
+    
+    def __init__(self, users_db):
+        # The user database (users_db) holds the qualitative growth metrics
+        self.users_db = users_db
+        
+    def calculate_resonance_score(self, user_a_id, user_b_id):
+        """
+        Calculates a qualitative resonance score (0.0 to 1.0) based on synergy.
+        """
+        user_a = self.users_db.get(user_a_id, {})
+        user_b = self.users_db.get(user_b_id, {})
+        
+        # --- 1. Vulnerability Compatibility (Matching Openness) ---
+        # Match users who are similarly open, or where one is slightly ahead (mentor/mentee dynamic).
+        # We use a simulated 'vulnerability_courage' metric from the Soul Garden/Activation.
+        vulnerability_a = user_a.get('growth_metrics', {}).get('vulnerability_courage', random.uniform(0.1, 0.9))
+        vulnerability_b = user_b.get('growth_metrics', {}).get('vulnerability_courage', random.uniform(0.1, 0.9))
+        
+        # Score is high when values are close or when one (mentor) is slightly higher.
+        compatibility_score = 1.0 - abs(vulnerability_a - vulnerability_b)
+        
+        # --- 2. Growth Mirroring Capacity (Complementary Intentions) ---
+        # Match users whose intentions complement each other (e.g., Healing + Purpose).
+        intentions_a = set(user_a.get('intentions', ['connection']))
+        intentions_b = set(user_b.get('intentions', ['connection']))
+        
+        # Complementary pairings boost the score significantly
+        complement_boost = 0
+        if ('healing' in intentions_a and 'purpose' in intentions_b) or \
+           ('purpose' in intentions_a and 'healing' in intentions_b):
+            complement_boost = 0.3
+        
+        # --- 3. Hope Amplification Potential (Mood + Joy Synergy) ---
+        # Match users whose combined state maximizes positive impact.
+        # Joy and Connection Depth are simulated from the Soul Garden data.
+        joy_a = user_a.get('growth_metrics', {}).get('joy_amplification', random.uniform(0.3, 0.7))
+        joy_b = user_b.get('growth_metrics', {}).get('joy_amplification', random.uniform(0.3, 0.7))
+        
+        # The score is amplified when both have a decent level of joy and connection.
+        amplification_score = (joy_a + joy_b) / 2.0
+        
+        # --- Final Weighted Resonance Score ---
+        # Higher weight on qualitative factors
+        resonance_score = (
+            (compatibility_score * 0.4) + 
+            (amplification_score * 0.3) + 
+            (complement_boost * 0.2) + 
+            (random.uniform(0.0, 0.1)) # Add a touch of true serendipity
+        )
+        
+        # Clamp between 0.0 and 1.0
+        return min(1.0, resonance_score)
+
+    def get_best_neural_match(self, user_id, potential_matches, threshold=0.65):
+        """
+        Iterates through potential matches and finds the highest-resonant pair.
+        """
+        best_match = None
+        max_resonance = threshold  # Must meet the base threshold
+        
+        for match_id in potential_matches:
+            if user_id == match_id:
+                continue
+                
+            resonance = self.calculate_resonance_score(user_id, match_id)
+            
+            if resonance > max_resonance:
+                max_resonance = resonance
+                best_match = match_id
+                
+        return best_match, max_resonance
+# core/magic_matcher.py (Updated Snippet)
+
+import random
+# --- NEW IMPORT ---
+from .neural_bridge import NeuralBridgeEngine 
+# ------------------
+
+class MagicMatchingEngine:
+    def __init__(self, users_db):
+        self.users_db = users_db
+        # --- NEW ENGINE INITIALIZATION ---
+        self.neural_bridge = NeuralBridgeEngine(users_db)
+        # ---------------------------------
+
+    def find_heartbeat_match(self, user_id, match_type='serendipitous'):
+        """
+        Find a heartbeat match using Neural Bridge Matching (NBM).
+        """
+        
+        # 1. Gather potential matches (simulated nearby users, excluding self)
+        potential_matches = [uid for uid in self.users_db.keys() if uid != user_id]
+        
+        if not potential_matches:
+            return {'status': 'failed', 'message': 'No potential souls nearby.'}
+
+        # 2. Run Neural Bridge Matching (NBM)
+        best_match_id, resonance_score = self.neural_bridge.get_best_neural_match(
+            user_id, 
+            potential_matches, 
+            threshold=0.75 # Set a high threshold for a 'magical' match
+        )
+
+        if not best_match_id:
+            return {'status': 'failed', 'message': 'Threshold too low. Try again later.'}
+
+        # 3. Construct the Nudge based on the deep match
+        match_data = self.users_db.get(best_match_id, {})
+        match_soul_name = match_data.get('soul_name', 'Anonymous Soul')
+        
+        match_info = {
+            'match_id': best_match_id,
+            'soul_name': match_soul_name,
+            'magic_type': f"Neural Bridge Match ({match_type.title()})",
+            'resonance_score': round(resonance_score, 3),
+            'vulnerability_match': 'High', # Derived from internal NBM calculation
+            'suggested_ritual': f"Co-Regulate Hope: Share one future dream.",
+            'nudge_idea': f"A resonance match with {match_soul_name}! Nudge: {self._generate_custom_nudge(match_type, resonance_score)}",
+            'magic_description': f"A Soul-Level Bridge has been found (Resonance: {round(resonance_score * 100)}%). This connection amplifies your collective hope and accelerates mutual growth."
+        }
+        
+        return match_info
+
+    def _generate_custom_nudge(self, match_type, score):
+        # Generates a more compelling, customized nudge based on the type and score
+        if match_type == 'healing' and score > 0.8:
+            return "Healing Mirror Found: Share a piece of beautiful vulnerability."
+        elif match_type == 'purpose' and score > 0.9:
+            return "Purpose Alignment: Meet to exchange core life missions."
+        else:
+            return "Serendipitous Spark: Let's share a moment of collective belonging."
+
+    # Keep other methods (find_first_heartbeat, generate_soul_garden, etc.) as they are, 
+    # but ensure they are initialized with the users_db parameter.
+    
+    # ... rest of MagicMatchingEngine methods ...
+# core/app.py (Updated Snippet)
+
+# ... imports ...
+
+from core.magic_matcher import MagicMatchingEngine
+# ... other imports ...
+
+# Global state for demo (This is the shared database)
+users_db = {} 
+
+# Initialize magical engines
+# --- UPDATED INITIALIZATION ---
+soul_engine = SoulActivationEngine()
+magic_matcher = MagicMatchingEngine(users_db) # Pass the shared database
+crisis_guardian = CrisisGuardian()
+spark_engine = ProofOfSpark()
+# ------------------------------
+
+# ... rest of the Flask application code ...
+# core/crisis_protocols.py
+
+import random
+import time
+import json
+import logging
+
+logger = logging.getLogger(__name__)
+
+class CrisisGuardian:
+    def __init__(self, users_db):
+        # Access to the deep profile data (Vulnerability Courage, Joy Amplification, etc.)
+        self.users_db = users_db
+        self.CRISIS_HOTLINES = self.load_hotlines()
+
+    def assess_and_respond(self, user_id, user_input_data):
+        """
+        Main function to assess crisis level based on multiple data sources.
+        user_input_data should include text/vibe data and any recent app activity.
+        """
+        user_data = self.users_db.get(user_id, {})
+        
+        # Calculate scores from three vectors
+        risk_score_text = self._score_textual_signals(user_input_data.get('message', ''))
+        risk_score_behavior = self._score_behavioral_signals(user_data, user_input_data.get('recent_activity', {}))
+        risk_score_qualitative = self._score_qualitative_signals(user_data)
+        
+        # Contextual Risk Score (Weighted Sum)
+        CONTEXTUAL_RISK_SCORE = (
+            (risk_score_text * 0.5) +          # Immediate urgency is most critical
+            (risk_score_behavior * 0.3) +      # Behavioral changes are strong predictors
+            (risk_score_qualitative * 0.2)     # Baseline profile suggests vulnerability
+        )
+
+        crisis_level = self._determine_level(CONTEXTUAL_RISK_SCORE)
+        
+        logger.warning(f"CRISIS ALERT for User {user_id[:4]}... Level: {crisis_level}, Score: {CONTEXTUAL_RISK_SCORE:.2f}")
+
+        # Execute the protocol
+        return self._execute_protocol(user_id, crisis_level)
+
+    # --- SCORING FUNCTIONS ---
+
+    def _score_textual_signals(self, text):
+        """Analyze new text input for immediate crisis markers (0.0 to 1.0)."""
+        text = text.lower()
+        if any(w in text for w in ['kill myself', 'end it all', 'goodbye', 'no hope left']):
+            return 1.0  # CRITICAL URGENCY
+        if any(w in text for w in ['can\'t go on', 'hopeless', 'overwhelmed', 'severe pain']):
+            return 0.7  # HIGH DISTRESS
+        return 0.0
+
+    def _score_behavioral_signals(self, user_data, activity_data):
+        """Analyze patterns based on Soul Garden metrics (0.0 to 1.0)."""
+        metrics = user_data.get('growth_metrics', {})
+        
+        # Isolation: Check for low connection activity compared to user baseline
+        isolation_score = 0.0
+        if activity_data.get('heartbeats_shared_24h', 0) == 0 and metrics.get('heartbeats_shared', 1) > 5:
+            isolation_score += 0.4
+            
+        # Vibe Drop: Check for a significant, sudden drop in mood compared to baseline
+        mood_drop_score = 0.0
+        if activity_data.get('current_mood', 5) < 3 and user_data.get('average_mood', 7) > 6:
+            mood_drop_score += 0.3
+            
+        return min(1.0, isolation_score + mood_drop_score)
+
+    def _score_qualitative_signals(self, user_data):
+        """Analyze baseline vulnerability from Neural Bridge Data (0.0 to 1.0)."""
+        metrics = user_data.get('growth_metrics', {})
+        
+        # Fragile Baseline: If vulnerability is high but joy/connection depth is low
+        # This signals high exposure without protective factors.
+        vulnerability = metrics.get('vulnerability_courage', 0.5)
+        joy = metrics.get('joy_amplification', 0.5)
+        
+        if vulnerability > 0.7 and joy < 0.3:
+            return 0.6 # High risk due to profile vulnerability
+        
+        # Risk is lower if protective factors (Joy, Connection Depth) are high
+        if metrics.get('connection_depth', 0.5) > 0.8:
+            return 0.1
+        
+        return 0.0
+
+    # --- PROTOCOL EXECUTION ---
+
+    def _determine_level(self, score):
+        """Map the final contextual score to a clinical intervention level."""
+        if score >= 0.8:
+            return 'CRITICAL'
+        if score >= 0.5:
+            return 'HIGH'
+        if score >= 0.3:
+            return 'MODERATE'
+        return 'LOW'
+
+    def _execute_protocol(self, user_id, crisis_level):
+        """Execute the appropriate, non-clinical intervention and referral."""
+        
+        # Clinical Guidance: Never provide diagnosis or therapy. Focus on safety and referral.
+        
+        if crisis_level == 'CRITICAL':
+            return {
+                'level': 'CRITICAL',
+                'title': "⚠️ IMMEDIATE SAFETY ALERT ⚠️",
+                'message': "Your Heartbeat Guardian has detected an urgent signal. You are not alone. Please use the resources below IMMEDIATELY.",
+                'actions': [
+                    {'type': 'CALL', 'name': '988 Suicide & Crisis Lifeline', 'value': '988'},
+                    {'type': '
+# core/app.py (Updated Snippet)
+
+# ... imports ...
+from core.crisis_protocols import CrisisGuardian # New import
+# ... other engine imports ...
+
+# Global state for demo (This is the shared database)
+users_db = {} 
+
+# Initialize magical engines
+soul_engine = SoulActivationEngine()
+magic_matcher = MagicMatchingEngine(users_db) 
+# --- UPDATED INITIALIZATION ---
+crisis_guardian = CrisisGuardian(users_db) # Pass the shared database
+# ------------------------------
+spark_engine = ProofOfSpark()
+
+
+# --- API ENDPOINT UPDATE ---
+
+@app.route('/api/crisis-support', methods=['POST'])
+def crisis_support_api():
+    """API for crisis support"""
+    # Use session to get the profile key
+    user_id = session.get('user_id', 'anon') 
+    data = request.json
+    
+    # 🚨 Call the contextual assessment
+    crisis_response = crisis_guardian.assess_and_respond(user_id, data)
+    return jsonify(crisis_response)
+
+# ... rest of the app ...
