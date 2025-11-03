@@ -6416,3 +6416,251 @@ class CrisisGuardian:
 
     def load_hotlines(self):
         return {'US': '988'}
+# services/geo/geo_router.py (Conceptual implementation)
+
+class GeoRouter:
+    """Routes user traffic to the nearest regional instance."""
+    def __init__(self):
+        self.regions = ['us-east', 'eu-central', 'ap-southeast']
+        
+    def route_to_nearest_region(self, user_ip):
+        """Routes user to nearest geographic region for low latency."""
+        # --- Simplified Geo-IP Lookup ---
+        # In production, this uses a robust GeoIP service.
+        user_location = self._geolocate_ip(user_ip) 
+        
+        # --- Simplified Routing Logic ---
+        if 'US' in user_location:
+            nearest_region = 'us-east'
+        elif 'Europe' in user_location:
+            nearest_region = 'eu-central'
+        else:
+            nearest_region = 'ap-southeast'
+            
+        return {
+            'region': nearest_region,
+            'api_endpoint': f"https://{nearest_region}.heartbeatsync.com",
+        }# k8s/neural-matcher-deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neural-matcher
+  labels:
+    app: matcher
+spec:
+  # High number of replicas to handle global load
+  replicas: 10 
+  selector:
+    matchLabels:
+      app: matcher
+  template:
+    metadata:
+      labels:
+        app: matcher
+    spec:
+      containers:
+      - name: matcher-core
+        image: heartbeat/neural-matcher:latest # Contains core/neural_bridge.py logic
+        resources:
+          # Request substantial resources to perform complex Neural Bridge calculations
+          requests:
+            memory: "1024Mi"
+            cpu: "500m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+        env:
+        - name: REDIS_URL
+          value: "redis-cluster.heartbeat.svc.cluster.local" # Connection to caching layer
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: neural-matcher-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: neural-matcher
+  minReplicas: 5
+  maxReplicas: 50 # Allows scaling up during viral growth or peak hours
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70 # Trigger scale-up when average CPU hits 70%
+// contracts/HeartbeatDAO.js (Conceptual Web3 Interaction)
+
+// NOTE: In production, this would be a client connected to an Ethereum Virtual Machine (EVM) network.
+
+class HeartbeatDAO {
+    constructor(web3Provider) {
+        // Simulated contract addresses
+        this.FC_CONTRACT_ADDRESS = '0xFC_ContractAddress';
+        this.GOVERNANCE_CONTRACT_ADDRESS = '0xDAO_ContractAddress';
+        this.web3 = web3Provider;
+        this.fate_credits = new Map(); // Simulates FC contract storage
+    }
+
+    // --- FATE CREDIT (SBT) MANAGEMENT ---
+
+    simulateMintFateCredit(userWallet, sparkId) {
+        // Called by core/proof_of_spark.py upon successful PoS validation
+        let currentCredits = this.fate_credits.get(userWallet) || 0;
+        this.fate_credits.set(userWallet, currentCredits + 1);
+        console.log(`✅ FC Minted: ${userWallet} now has ${currentCredits + 1} Fate Credits.`);
+        
+        // This is where the actual Solidity mint() function would be called:
+        // const tx = this.FC_CONTRACT.methods.mint(userWallet, sparkId).send();
+        
+        return true;
+    }
+
+    getFateCreditBalance(userWallet) {
+        return this.fate_credits.get(userWallet) || 0;
+    }
+
+    // --- GOVERNANCE FUNCTIONS ---
+
+    proposeUpgrade(proposerWallet, changes) {
+        if (this.getFateCreditBalance(proposerWallet) < 10) {
+            return {status: "FAILED", reason: "Requires minimum 10 FC for proposal."};
+        }
+        const proposalId = `P_${Date.now()}`;
+        console.log(`🏛️ NEW PROPOSAL: ${proposalId} submitted by ${proposerWallet}`);
+        // In a real DAO, this submits a transaction to the Governance contract.
+        return {status: "PENDING_VOTE", proposalId};
+    }
+
+    castVote(voterWallet, proposalId, support) { // support: TRUE for YES, FALSE for NO
+        const votePower = this.getFateCreditBalance(voterWallet);
+        if (votePower === 0) {
+            return {status: "FAILED", reason: "Must have Fate Credits to vote."};
+        }
+        // Simulates the contract logging the vote
+        console.log(`🗳️ VOTE CAST: Wallet ${voterWallet} voted ${support ? 'YES' : 'NO'} with ${votePower} VP.`);
+        return {status: "VOTED", power: votePower};
+    }
+}
+
+// Example usage in the Flask app:
+// const HeartbeatDAO = require('./contracts/HeartbeatDAO');
+// const heartbeat_dao = new HeartbeatDAO(w3);
+# core/ei_engine.py
+
+import random
+# NOTE: In production, 'pipeline' from 'transformers' or a custom model would be used.
+
+class EmotionalIntelligenceEngine:
+    """Analyzes real-time conversation dynamics to provide coaching."""
+    
+    def __init__(self):
+        # Simulated NLP tool for sentiment/tone detection
+        self.nlp_tool = self._load_mock_nlp() 
+
+    def _load_mock_nlp(self):
+        """Mock function to simulate a Hugging Face NLP pipeline."""
+        def analyze_text(text):
+            text = text.lower()
+            if 'grateful' in text or 'joy' in text: return 'POSITIVE', 0.9 
+            if 'hard' in text or 'struggle' in text: return 'NEGATIVE', 0.7
+            if 'i' in text and len(text.split()) > 5: return 'VULNERABLE', 0.6
+            return 'NEUTRAL', 0.5
+        return analyze_text
+    
+    def analyze_session_dynamics(self, user_history, match_history):
+        """Analyzes the current flow of communication."""
+        
+        a_turns = len(user_history)
+        b_turns = len(match_history)
+        total_turns = a_turns + b_turns
+
+        # Check for Reciprocity (0.0 to 1.0)
+        reciprocity = 1.0 - abs(a_turns - b_turns) / total_turns if total_turns > 0 else 0.0
+        
+        # Check for Vulnerability Depth (Averaged score)
+        a_vulnerability = sum(1 for text in user_history if self.nlp_tool(text)[0] == 'VULNERABLE') / a_turns if a_turns else 0.0
+        b_vulnerability = sum(1 for text in match_history if self.nlp_tool(text)[0] == 'VULNERABLE') / b_turns if b_turns else 0.0
+        vulnerability_depth = (a_vulnerability + b_vulnerability) / 2.0
+        
+        return {
+            'reciprocity': round(reciprocity, 2),
+            'vulnerability_depth': round(vulnerability_depth, 2),
+            'user_dominance': round(a_turns / total_turns, 2) if total_turns else 0.5
+        }
+
+    def generate_coaching_tip(self, user_id, dynamics, user_text=""):
+        """Provides a real-time, context-aware coaching nudge."""
+        
+        # Tip 1: Reciprocity/Listening Check
+        if dynamics['user_dominance'] > 0.65:
+            return "👂 **Active Listening Tip:** Your match might be waiting to share. Try asking an open-ended question to invite their voice."
+        
+        # Tip 2: Vulnerability/Empathy Nudge
+        if dynamics['vulnerability_depth'] > 0.4 and self.nlp_tool(user_text)[0] == 'NEGATIVE':
+            return "💖 **Empathy Check:** It sounds like your match is sharing something difficult. Offer a validation statement before sharing your own thoughts."
+            
+        # Tip 3: Positive Amplification
+        if dynamics['reciprocity'] > 0.85 and dynamics['vulnerability_depth'] < 0.2:
+            return "✨ **Go Deeper:** The connection is flowing well! Ready to share a slightly more vulnerable truth, or a goal for growth?"
+        
+        return "👍 **Flowing Well:** Continue being present and authentic."
+
+
+# Simulates session data storage
+session_history_db = {}
+# core/app.py (New API Endpoint Snippet)
+
+# ... existing imports ...
+from core.ei_engine import EmotionalIntelligenceEngine, session_history_db # New import
+
+# ... engine initialization ...
+ei_engine = EmotionalIntelligenceEngine() # Initialize the new engine
+# ... rest of initializations ...
+
+
+@app.route('/api/live-coaching', methods=['POST'])
+def live_coaching():
+    """
+    API endpoint for real-time conversation analysis and coaching.
+    Receives text and session ID, returns a coaching tip.
+    """
+    try:
+        data = request.get_json()
+        user_id = session.get('user_id', 'anon_user')
+        session_id = data.get('session_id')
+        user_text = data.get('text', '')
+        
+        if not session_id:
+            return jsonify({'tip': "Connection not yet established."})
+
+        # Mock database update for history
+        if session_id not in session_history_db:
+            session_history_db[session_id] = {'user_a': [], 'user_b': []}
+            
+        # Assume user is always 'user_a' in this simplified model
+        session_history_db[session_id]['user_a'].append(user_text)
+        
+        # Analyze current session dynamics
+        dynamics = ei_engine.analyze_session_dynamics(
+            session_history_db[session_id]['user_a'],
+            session_history_db[session_id]['user_b'] # Mock match partner's history
+        )
+        
+        # Generate the real-time tip
+        coaching_tip = ei_engine.generate_coaching_tip(user_id, dynamics, user_text)
+        
+        return jsonify({
+            'tip': coaching_tip,
+            'dynamics_summary': dynamics # For the front-end dashboard
+        })
+
+    except Exception as e:
+        logger.error(f"EI Engine Error: {str(e)}")
+        return jsonify({'tip': 'Connection Guardian is offline.'})
+
+# ... rest of the app ...
+./launch_magic.sh
