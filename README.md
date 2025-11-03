@@ -640,7 +640,7 @@ An open-source, privacy-first protocol that facilitates real human connections t
 
 ```bash
 # Clone repository
-git clone https://github.com/heartbeat-sync/core.git
+git clone https://github.com/LHMisme420/heartbeat-sync.git
 cd heartbeat-sync
 
 # Install dependencies
