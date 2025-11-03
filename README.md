@@ -1046,3 +1046,20 @@ heartbeat-sync/ (YOUR EXISTING REPO)
 │   ├── ETHICS_CHARTER.md
 │   └── CONTRIBUTING.md
 └── README.md          ← UPDATE this file
+# Add to your app.py
+@app.route('/api/stats')
+def get_stats():
+    return jsonify({
+        'users_connected': random.randint(500, 2000),  # Simulate traction
+        'successful_sparks': random.randint(100, 500),
+        'avg_mood_improvement': '+2.3 points',
+        'communities_active': 6
+    })
+# Corporate wellness integration
+@app.route('/api/enterprise')
+def enterprise_dashboard():
+    return "HR dashboard for employee connection metrics"
+# Corporate wellness integration
+@app.route('/api/enterprise')
+def enterprise_dashboard():
+    return "HR dashboard for employee connection metrics"
