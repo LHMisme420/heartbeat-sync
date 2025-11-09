@@ -7375,3 +7375,47 @@ services:
 mv core/* .
 rmdir core
 # Update imports in app.py to remove "core." prefix
+heartbeat-sync/ (YOUR EXISTING REPO)
+├── core/                    ← KEEP ALL YOUR EXISTING CODE
+│   ├── app.py              ← Your full magical version
+│   ├── proof_of_spark.py
+│   ├── soul_activation.py
+│   └── requirements.txt
+├── templates/              ← KEEP ALL TEMPLATES  
+├── static/                 ← KEEP ALL ASSETS
+├── app.py                  ← ADD THIS: Simple deployment wrapper
+├── requirements.txt        ← ADD THIS: Main requirements
+└── app.yaml               ← ADD THIS: DigitalOcean config
+"""
+Heartbeat Sync - Deployment Wrapper
+Points to your core application
+"""
+
+import os
+import sys
+
+# Add core directory to path
+sys.path.append('core')
+
+# Import your main app from core
+from core.app import app
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
+flask==2.3.3
+gunicorn==21.2.0
+pandas==2.0.3
+python-dotenv==1.0.0
+name: heartbeat-sync
+services:
+- name: web
+  source_dir: /
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: LHMisme420/heartbeat-sync
+  run_command: gunicorn --bind 0.0.0.0:$PORT app:app
+  environment_slug: python
+  instance_count: 1
+  instance_size_slug: basic-xxs
